@@ -1,0 +1,269 @@
+code,n_units,n_coders,percent_agreement,krippendorff_alpha,cohen_kappa,fleiss_kappa,scott_pi,status,krippendorff_interpretation,kappa_interpretation
+People in the Image/Video__Ordinary_people___average_citizens___ordinary_supporters__e_g___individuals_as_well_as_groups_of_citizens_such_as_teachers__pensioners__students__caregivers__etc___bin,20,4,0.55,0.4349881796690307,NA,0.43262411347517776,NA,Calculated,Moderate,Moderate
+People in the Image/Video___Members_of__minorities__e_g___refugees__LGBTQ___people_with_disabilities__Jewish_people__women__when_women_are_explicitly_labeled__depicted__or_referred_to_as_a_minority__bin,20,4,0.85,0.6745642701525054,NA,0.6732026143790866,NA,Calculated,Good,Good
+People in the Image/Video__Illegal_actors__criminals__offenders__terrorists__extremists___extremist_groups__Actors_who_commit_generally_criminally_relevant_actions_without_being_associated_with_a_specific_party__business___non_terrorist__organization__or__non_extremist__social_movement__please_code_them_accordingly___actors_who_plan_and_carry_out_criminal_activities_in_a_structured_group__actors_who_use_violence_bin,20,4,0.9,0.19528619528619529,NA,0.19191919191919588,NA,Calculated,Very Poor,Very Poor
+People in the Image/Video__CDA__Henri_Bontenbal_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__CDA__Hanneke_Steen_bin,20,4,0.95,-0.00843881856540074,NA,-0.012658227848089766,NA,Calculated,Very Poor,Very Poor
+People in the Image/Video__Other_CDA_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__GL_PvdA__Frans_Timmermans_bin,20,4,0.9,0.8275613275613276,NA,0.8268398268398278,NA,Calculated,Excellent,Excellent
+People in the Image/Video__GL_PvdA__Esmah_Lahlah_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__GL_PvdA__Jesse_Klaver_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__GL_PvdA__Marjolein_Moorman_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__GL_PvdA__Mei_Li_Vos_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__GL_PvdA__Femke_Halsema_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_GL_PvdA_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__PVV__Geert_Wilders_bin,20,4,0.9,0.8047385620915033,NA,0.8039215686274521,NA,Calculated,Excellent,Excellent
+People in the Image/Video__PVV__Fleur_Agema_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__PVV__Dirk_Beljaarts_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__PVV__Barry_Madlener_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__PVV__Marjolein_Faber_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__PVV__Reinette_Klever_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__PVV__Zsolt_Szab__bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__PVV__Vicky_Maeijer_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__PVV__Chris_Jansen_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__PVV__Martin_Bosma_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_PVV_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__VVD__Dilan_Ye_ilg_z_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__VVD__Sophie_Hermans_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__VVD__Eelco_Heinen_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__VVD__Ruben_Brekelmans_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__VVD__David_van_Weel_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__VVD__Mari_lle_Paul_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__VVD__Vincent_Karremans_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__VVD__Jurgen_Nobel_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_VVD_politicians_bin,20,4,0.95,0.31908831908831914,NA,0.31623931623932267,NA,Calculated,Poor,Poor
+People in the Image/Video__D66__Rob_Jetten_bin,20,4,0.9,0.6362252663622527,NA,0.6347031963470339,NA,Calculated,Moderate,Good
+People in the Image/Video__D66__Jan_Paternotte_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__D66__Hans_Vijlbrief_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__D66__Paul_van_Meenen_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_D66_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__BBB__Caroline_van_der_Plas_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__BBB__Mona_Keijzer_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__BBB__Eddie_van_Marum_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__BBB__Jean_Rummenie_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__BBB__Gijs_Tuinman_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__BBB__Femke_Wiersma_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_BBB_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__SP__Jimmy_Dijk_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_SP_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__FvD__Thierry_Baudet_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__FvD__Gideon_van_Meijeren_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_FVD_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__CU__Mirjam_Bikker_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__CU__Pieter_Grinwis_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_CU_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__JA21__Joost_Eerdmans_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__JA21__Annabel_Nanninga_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__JA21__Ingrid_Coenradie_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_JA21_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Volt__Laurens_Dassen_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Volt__Marieke_Koekkoek_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_Volt_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__SGP__Chris_Stoffer_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_SGP_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Denk__Stephan_van_Baarle_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Denk__Tunahan_Kuzu_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_Denk_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__NSC__Eddy_van_Hijum_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__NSC__Nicolien_van_Vroonhoven_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__NSC__Eppo_Bruins_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__NSC__Tjebbe_van_Oostenbruggen_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__NSC__Teun_Struycken_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__NSC__Judith_Uitermark_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__NSC__Caspar_Veldkamp_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__NSC__Dani_lle_Jansen_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_NSC_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__PvdD__Esther_Ouwehand_bin,20,4,0.95,0.6551226551226551,NA,0.6536796536796577,NA,Calculated,Moderate,Good
+People in the Image/Video__PvdD__Ines_Kosti__bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_PvdD_politicians_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_politicians_from_Dutch_parties___independent_politicians_bin,20,4,0.95,-0.00843881856540074,NA,-0.01265822784808527,NA,Calculated,Very Poor,Very Poor
+People in the Image/Video__Foreign_politicians__ALL_EXCEPT_from_EU__UN__NATO__bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Foreign_politicians_from_EU__UN__NATO_bin,20,4,0.9,-0.02136752136752129,NA,-0.02564102564102056,NA,Calculated,Very Poor,Very Poor
+People in the Image/Video__Representatives_of_non_political_institutions__e_g___police__churches__military__other_public_institutions__bin,20,4,0.85,0.5322896281800391,NA,0.5303326810176141,NA,Calculated,Moderate,Moderate
+People in the Image/Video__Representatives_of_interest_groups___NGOs__e_g___Greenpeace__Amnesty_International__Doctors_Without_Borders__Reporters_Without_Borders__trade_unions__employers__associations__lobbyists__bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Representatives_of_social_movements__e_g___Fridays_for_Future__Identitarian_Movement__QAnon___MeToo_movement__bin,20,4,0.9,0.4758771929824561,NA,0.4736842105263187,NA,Calculated,Moderate,Moderate
+People in the Image/Video__Entrepreneurs___business_leaders__e_g___from_VW__Porsche__Daimler__Amazon__Google__Facebook__bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Celebrities_and_or_opinion_leaders__e_g___actors__sports_figures_athletes__musicians__economists__social_media_influencers__bin,20,4,0.95,-0.00843881856540074,NA,-0.012658227848089766,NA,Calculated,Very Poor,Very Poor
+People in the Image/Video__Journalists__representatives_of_news_media__general__media_types__individual_media_outlets__bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+People in the Image/Video__Other_persons_bin,20,4,0.95,-0.00843881856540074,NA,-0.01265822784808527,NA,Calculated,Very Poor,Very Poor
+Names of Actors__x_bin,20,4,0.55,0.5159578182833997,NA,0.5139325371883517,NA,Calculated,Moderate,Moderate
+Names of Actors__X_bin,20,4,0.95,-0.00843881856540074,NA,-0.01265822784808527,NA,Calculated,Very Poor,Very Poor
+Names of Actors__NA_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Names of Actors__Greta_Thunberg_bin,20,4,0.95,0.31908831908831914,NA,0.31623931623932267,NA,Calculated,Poor,Poor
+Names of Actors__Leeuwinga_bin,20,4,0.95,-0.00843881856540074,NA,-0.01265822784808527,NA,Calculated,Very Poor,Very Poor
+Names of Actors__Lezaire_bin,20,4,0.95,-0.00843881856540074,NA,-0.01265822784808527,NA,Calculated,Very Poor,Very Poor
+Names of Actors__Nooter_bin,20,4,0.95,-0.00843881856540074,NA,-0.01265822784808527,NA,Calculated,Very Poor,Very Poor
+Names of Actors__Rood_de_Wit_bin,20,4,0.95,-0.00843881856540074,NA,-0.01265822784808527,NA,Calculated,Very Poor,Very Poor
+Names of Actors__Ruijter_bin,20,4,0.95,-0.00843881856540074,NA,-0.01265822784808527,NA,Calculated,Very Poor,Very Poor
+Names of Actors__Visser_bin,20,4,0.95,-0.00843881856540074,NA,-0.01265822784808527,NA,Calculated,Very Poor,Very Poor
+Names of Actors__Plak_Schouten_bin,20,4,0.95,-0.00843881856540074,NA,-0.01265822784808527,NA,Calculated,Very Poor,Very Poor
+Names of Actors__Peelen_bin,20,4,0.95,-0.00843881856540074,NA,-0.01265822784808527,NA,Calculated,Very Poor,Very Poor
+Names of Actors__Thunberg_bin,20,4,0.95,0.6551226551226551,NA,0.6536796536796577,NA,Calculated,Moderate,Good
+Names of Actors__Muslim_bin,20,4,0.95,-0.00843881856540074,NA,-0.012658227848089766,NA,Calculated,Very Poor,Very Poor
+Theme of the Image/Video__Event announcement/Election call/Candidate presentation_bin,20,4,0.85,-0.03463203463203457,NA,-0.038961038961035845,NA,Calculated,Very Poor,Very Poor
+Theme of the Image/Video__Political positioning_bin,20,4,0.5,0.37760416666666663,NA,0.37500000000000033,NA,Calculated,Poor,Poor
+Theme of the Image/Video__Negative imagery/Negative campaigning: The image/video portrays the political opponent in a negative light. This can happen through sharp criticism or with humor._bin,20,4,0.7,0.5131481481481481,NA,0.511111111111112,NA,Calculated,Moderate,Moderate
+"Theme of the Image/Video__Positive imagery/Acclaims: The image/video portrays past and future achievements of the party/government in a positive light. This includes drawing a positive balance, saying “thank you” to campaign helpers, or positively discussing political plans/goals._bin",20,4,0.75,0.11654707545118503,NA,0.11285061969993643,NA,Calculated,Very Poor,Very Poor
+Theme of the Image/Video__Symbolic image of person(s)/politician(s)/citizen(s) looking directly into the camera (classic campaign poster image)._bin,20,4,0.75,0.04304304304304307,NA,0.03903903903904113,NA,Calculated,Very Poor,Very Poor
+"Theme of the Image/Video__Events/Landscape & city scenes: Unlike a symbolic image, people/politicians are doing something, moving, or working (e.g., groups such as politicians, refugees, farmers, protesters, police officers, etc.). Alternatively, a city or (natural) landscape is shown where something is happening (e.g., forest dieback, fire, or flooding, nuclear power plants or wind turbines)._bin",20,4,0.8,0.07940740740740737,NA,0.07555555555555789,NA,Calculated,Very Poor,Very Poor
+Theme of the Image/Video__Image from a campaign event_bin,20,4,0.95,0.31908831908831914,NA,0.31623931623932267,NA,Calculated,Poor,Poor
+Theme of the Image/Video__Individual voter contact_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Theme of the Image/Video__Media work (incl. TV debate)_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Theme of the Image/Video__Private background story_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Theme of the Image/Video__Everyday politics_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Theme of the Image/Video__Nostalgic / historical Dutch imagery (references to glorified past or national symbols)_bin,20,4,0.95,0.6551226551226551,NA,0.6536796536796593,NA,Calculated,Moderate,Good
+"Theme of the Image/Video__Humor / Satire (depictions used to mock, exaggerate, or parody)_bin",20,4,0.6,0.38012241933810564,NA,0.3775287892934961,NA,Calculated,Poor,Poor
+Theme of the Image/Video__Fantasy / futuristic scenarios or depictions of imagined or speculative realities (utopian or dystopian future Netherlands)_bin,20,4,0.95,0.7875555555555556,NA,0.7866666666666703,NA,Calculated,Good,Good
+Theme of the Image/Video__Other imagery_bin,20,4,0.9,0.19528619528619529,NA,0.19191919191919588,NA,Calculated,Very Poor,Very Poor
+Theme of the Image/Video__: _bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Theme of the Image/Video__NA: NA_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__Ordinary people / average citizens / ordinary supporters_bin,20,4,0.5,0.4227053140096618,NA,0.42028985507246425,NA,Calculated,Moderate,Moderate
+Actors__(Members of) minorities_bin,20,4,0.8,0.6888020833333333,NA,0.6875000000000011,NA,Calculated,Good,Good
+"Actors__Illegal actors, criminals, offenders, terrorists, extremists / extremist groups_bin",20,4,0.85,0.4019019019019019,NA,0.3993993993994017,NA,Calculated,Moderate,Poor
+"Actors__Dutch government, ministries, parliament, and courts (ALSO KABINET SCHOOF)_bin",20,4,0.85,0.3626666666666667,NA,0.36000000000000226,NA,Calculated,Poor,Poor
+"Actors__Governments, ministries, parliaments and courts of the provinces_bin",20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__CDA_bin,20,4,0.95,0.7875555555555556,NA,0.7866666666666693,NA,Calculated,Good,Good
+Actors__GL-PvdA_bin,20,4,0.9,0.8572281959378734,NA,0.8566308243727607,NA,Calculated,Excellent,Excellent
+Actors__PVV_bin,20,4,0.8,0.7962489343563512,NA,0.7953964194373409,NA,Calculated,Good,Good
+Actors__VVD_bin,20,4,0.85,0.538966049382716,NA,0.5370370370370388,NA,Calculated,Moderate,Moderate
+Actors__D66_bin,20,4,0.9,0.7550871029131898,NA,0.7540623627580163,NA,Calculated,Good,Good
+Actors__BBB_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__SP_bin,20,4,0.95,0.6551226551226551,NA,0.6536796536796577,NA,Calculated,Moderate,Good
+Actors__FvD_bin,20,4,0.95,0.31908831908831914,NA,0.31623931623932267,NA,Calculated,Poor,Poor
+Actors__CU_bin,20,4,0.95,0.6551226551226551,NA,0.6536796536796577,NA,Calculated,Moderate,Good
+Actors__JA21_bin,20,4,1,1,NA,1.0000000000000024,NA,Calculated,Excellent,Excellent
+Actors__Volt_bin,20,4,1,1,NA,1.0000000000000024,NA,Calculated,Excellent,Excellent
+Actors__SGP_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__Denk_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__NSC_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__PvdD_bin,20,4,0.95,0.8440965427266798,NA,0.8434442270058727,NA,Calculated,Excellent,Excellent
+Actors__Partijkartel_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__Gevestigde partijen_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__Other parties from the Netherlands_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__Other politicians from Dutch parties_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+"Actors__Foreign politicians or parties and/or foreign governments, foreign parliaments_bin",20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+"Actors__Europe/EU/NATO, EU/NATO institutions and bodies & their representatives_bin",20,4,0.8,0.4467592592592593,NA,0.444444444444446,NA,Calculated,Moderate,Moderate
+Actors__(Representatives of) non-political institutions_bin,20,4,0.85,0.22103703703703703,NA,0.21777777777778057,NA,Calculated,Poor,Poor
+"Actors__(Representatives of) interest groups, NGOs_bin",20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__(Representatives of) social movements_bin,20,4,0.85,0.3626666666666667,NA,0.36000000000000226,NA,Calculated,Poor,Poor
+Actors__Companies / business leaders_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__Celebrities and/or opinion leaders_bin,20,4,0.95,-0.00843881856540074,NA,-0.012658227848089766,NA,Calculated,Very Poor,Very Poor
+Actors__News media and their journalists / representatives_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__Other actors_bin,20,4,0.95,-0.00843881856540074,NA,-0.012658227848089766,NA,Calculated,Very Poor,Very Poor
+Actors__PVV: Geert Wilders_bin,20,4,0.75,0.7337788916736285,NA,0.7326649958228911,NA,Calculated,Good,Good
+Actors__: _bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__GL-PvdA: Frans Timmermans_bin,20,4,0.9,0.8275613275613276,NA,0.8268398268398278,NA,Calculated,Excellent,Excellent
+Actors__NA: NA_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Actors__D66: Rob Jetten_bin,20,4,0.9,0.6362252663622527,NA,0.6347031963470339,NA,Calculated,Moderate,Good
+Actors__PvdD: Esther Ouwehand_bin,20,4,0.95,0.6551226551226551,NA,0.6536796536796577,NA,Calculated,Moderate,Good
+Actors__CDA: Hanneke Steen_bin,20,4,0.95,-0.00843881856540074,NA,-0.012658227848089766,NA,Calculated,Very Poor,Very Poor
+Type of Attack__Attack on political issues/achievements/ideologies_bin,20,4,0.45,0.16411084207694382,NA,0.16061339790153392,NA,Calculated,Very Poor,Very Poor
+Type of Attack__Attack on a person/party/organization/institution_bin,20,4,0.65,0.5746249682176456,NA,0.5728451563691845,NA,Calculated,Moderate,Moderate
+Type of Attack__Other form of attack/negative tonality_bin,20,4,0.85,0.1264619883040936,NA,0.12280701754386252,NA,Calculated,Very Poor,Very Poor
+Type of Attack__: _bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Type of Attack__NA: NA_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__No actor attacked_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__Ordinary people / average citizens / ordinary supporters_bin,20,4,0.95,-0.00843881856540074,NA,-0.012658227848089766,NA,Calculated,Very Poor,Very Poor
+Target of Attack__(Members of) minorities_bin,20,4,0.9,0.8093447293447293,NA,0.8085470085470096,NA,Calculated,Excellent,Excellent
+"Target of Attack__Illegal actors, criminals, offenders, terrorists, extremists / extremist groups_bin",20,4,0.9,0.6411411411411412,NA,0.6396396396396419,NA,Calculated,Moderate,Good
+"Target of Attack__Dutch government, ministries, parliament, and courts (ALSO KABINET SCHOOF)_bin",20,4,0.95,-0.00843881856540074,NA,-0.012658227848089766,NA,Calculated,Very Poor,Very Poor
+"Target of Attack__Governments, ministries, parliaments and courts of the provinces_bin",20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__CDA_bin,20,4,0.95,-0.00843881856540074,NA,-0.012658227848089766,NA,Calculated,Very Poor,Very Poor
+Target of Attack__GL-PvdA_bin,20,4,0.9,0.8275613275613276,NA,0.8268398268398278,NA,Calculated,Excellent,Excellent
+Target of Attack__PVV_bin,20,4,0.95,0.7875555555555556,NA,0.7866666666666693,NA,Calculated,Good,Good
+Target of Attack__VVD_bin,20,4,1,1,NA,1.0000000000000024,NA,Calculated,Excellent,Excellent
+Target of Attack__D66_bin,20,4,1,1,NA,1.0000000000000024,NA,Calculated,Excellent,Excellent
+Target of Attack__BBB_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__SP_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__FvD_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__CU_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__JA21_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__Volt_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__SGP_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__Denk_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__NSC_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__PvdD_bin,20,4,0.95,0.6551226551226551,NA,0.6536796536796577,NA,Calculated,Moderate,Good
+Target of Attack__Other parties from the Netherlands_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__Other politicians from Dutch parties_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+"Target of Attack__Foreign politicians or parties and/or foreign governments, foreign parliaments_bin",20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+"Target of Attack__Europe/EU/NATO, EU/NATO institutions and bodies & their representatives_bin",20,4,0.85,0.3626666666666667,NA,0.36000000000000226,NA,Calculated,Poor,Poor
+Target of Attack__(Representatives of) non-political institutions_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+"Target of Attack__(Representatives of) interest groups, NGOs_bin",20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__(Representatives of) social movements_bin,20,4,1,1,NA,1.0000000000000024,NA,Calculated,Excellent,Excellent
+Target of Attack__Companies / business leaders_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__Celebrities and/or opinion leaders_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__News media and their journalists / representatives_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__Other actors_bin,20,4,0.95,-0.00843881856540074,NA,-0.012658227848089766,NA,Calculated,Very Poor,Very Poor
+Target of Attack__: _bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__GL-PvdA: Frans Timmermans_bin,20,4,0.9,0.8275613275613276,NA,0.8268398268398278,NA,Calculated,Excellent,Excellent
+Target of Attack__NA: NA_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Attack__PVV: Geert Wilders_bin,20,4,0.95,0.7875555555555556,NA,0.7866666666666693,NA,Calculated,Good,Good
+Target of Attack__D66: Rob Jetten_bin,20,4,1,1,NA,1.0000000000000024,NA,Calculated,Excellent,Excellent
+Target of Attack__PvdD: Esther Ouwehand_bin,20,4,0.95,0.6551226551226551,NA,0.6536796536796577,NA,Calculated,Moderate,Good
+Target of Attack__CDA: Hanneke Steen_bin,20,4,0.95,-0.00843881856540074,NA,-0.012658227848089766,NA,Calculated,Very Poor,Very Poor
+Type of Acclaim__Acclaim/Praise/Recognition of political issues/achievements/ideologies_bin,20,4,0.75,0.04304304304304307,NA,0.03903903903904193,NA,Calculated,Very Poor,Very Poor
+Type of Acclaim__Acclaim/Praise/Recognition of a person/party/organization/institution_bin,20,4,0.65,0.19528619528619529,NA,0.1919191919191929,NA,Calculated,Very Poor,Very Poor
+Type of Acclaim__Other form of recognition/praise_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Type of Acclaim__: _bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Type of Acclaim__NA: NA_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__No actor praised_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__Ordinary people / average citizens / ordinary supporters_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__(Members of) minorities_bin,20,4,0.95,0.31908831908831914,NA,0.31623931623932267,NA,Calculated,Poor,Poor
+"Target of Acclaim__Illegal actors, criminals, offenders, terrorists, extremists / extremist groups_bin",20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+"Target of Acclaim__Dutch government, ministries, parliament, and courts (ALSO KABINET SCHOOF)_bin",20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+"Target of Acclaim__Governments, ministries, parliaments and courts of the provinces_bin",20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__CDA_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__GL-PvdA_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__PVV_bin,20,4,0.65,0.29876259727005994,NA,0.2958285495598938,NA,Calculated,Poor,Poor
+Target of Acclaim__VVD_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__D66_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__BBB_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__SP_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__FvD_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__CU_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__JA21_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__Volt_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__SGP_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__Denk_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__NSC_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__PvdD_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__Other parties from the Netherlands_bin,20,4,0.95,0.31908831908831914,NA,0.31623931623932267,NA,Calculated,Poor,Poor
+Target of Acclaim__Other politicians from Dutch parties_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+"Target of Acclaim__Foreign politicians or parties and/or foreign governments, foreign parliaments_bin",20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+"Target of Acclaim__Europe/EU/NATO, EU/NATO institutions and bodies & their representatives_bin",20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__(Representatives of) non-political institutions_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+"Target of Acclaim__(Representatives of) interest groups, NGOs_bin",20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__(Representatives of) social movements_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__Companies / business leaders_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__Celebrities and/or opinion leaders_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__News media and their journalists / representatives_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__Other actors_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__PVV: Geert Wilders_bin,20,4,0.8,0.4688888888888889,NA,0.46666666666666806,NA,Calculated,Moderate,Moderate
+Target of Acclaim__NA: NA_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Target of Acclaim__: _bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+AI Image/Video (AI or not),20,4,0.75,0.7167407407407407,NA,0.71555555555555606,NA,Calculated,Good,Good
+Topics__election_in_general_electoral_system_campaign_events_campaign_dates_campaign_appearances_election_polls_bin,20,4,0.9,-0.02136752136752129,NA,-0.02564102564102056,NA,Calculated,Very Poor,Very Poor
+Topics__political_parties_and_politicians_candidate_presentation_politicians_as_the_main_subject_bin,20,4,0.65,0.19528619528619529,NA,0.1919191919191929,NA,Calculated,Very Poor,Very Poor
+Topics__call_to_vote_get_out_the_vote_call_without_and_with_naming_of_party_s_bin,20,4,0.7,0.6352258852258852,NA,0.6336996336996342,NA,Calculated,Moderate,Good
+Topics__economy_and_finance_bin,20,4,0.8,0.4688888888888889,NA,0.46666666666666806,NA,Calculated,Moderate,Moderate
+Topics__labor_and_social_issues_bin,20,4,0.8,0.5447619047619048,NA,0.5428571428571439,NA,Calculated,Moderate,Moderate
+Topics__domestic_and_migration_policy_public_safety_crime_incl_femicide_political_radicalism_religious_fanaticism_terrorism_bin,20,4,0.75,0.7431764453041049,NA,0.7421018697614448,NA,Calculated,Good,Good
+Topics__environmental_and_energy_policy_bin,20,4,0.85,0.5322896281800391,NA,0.5303326810176141,NA,Calculated,Moderate,Moderate
+Topics__foreign_security_and_defense_policy_bin,20,4,0.9,0.19528619528619529,NA,0.19191919191919588,NA,Calculated,Very Poor,Very Poor
+Topics__housing_crisis_bin,20,4,0.9,0.7233796296296297,NA,0.7222222222222239,NA,Calculated,Good,Good
+Topics__digital_and_infrastructure_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Topics__europe_bin,20,4,0.85,0.538966049382716,NA,0.5370370370370388,NA,Calculated,Moderate,Moderate
+Topics__education_and_culture_bin,20,4,0.9,0.6362252663622527,NA,0.6347031963470339,NA,Calculated,Moderate,Good
+Topics__constitution_of_the_political_system_e_g_independence_of_the_judiciary_rule_of_law_parliamentary_representation_of_the_will_of_the_people_bin,20,4,1,NA,NA,Inf,NA,Calculated,Unable to calculate,Excellent
+Topics__civil_rights_including_gender_politics_lgbtq_policies_bin,20,4,1,1,NA,1.0000000000000024,NA,Calculated,Excellent,Excellent
+Topics__other_political_topic_bin,20,4,0.95,-0.00843881856540074,NA,-0.01265822784808527,NA,Calculated,Very Poor,Very Poor
+Post availability,20,NA,0.95,NA,NA,NA,NA,Excellent,Unable to calculate,Unable to calculate
+Image(s)/Video(s) included,20,NA,0.9,NA,NA,NA,NA,Excellent,Unable to calculate,Unable to calculate
+AI Image/Video,20,NA,0.4,NA,NA,NA,NA,Moderate,Unable to calculate,Unable to calculate
+AI Labeling in Image/Video,20,NA,0.95,NA,NA,NA,NA,Excellent,Unable to calculate,Unable to calculate
+AI Labeling in Post Text,20,NA,0.95,NA,NA,NA,NA,Excellent,Unable to calculate,Unable to calculate
+AI Labeling in Post/Ad,20,NA,0.8,NA,NA,NA,NA,Excellent,Unable to calculate,Unable to calculate
+Nature of the Image/Video,20,NA,0.85,NA,NA,NA,NA,Excellent,Unable to calculate,Unable to calculate
+Number of People in the Image/Video,20,NA,0.9,NA,NA,NA,NA,Excellent,Unable to calculate,Unable to calculate
+Negative Tendency/Tonality,20,NA,0.9,NA,NA,NA,NA,Excellent,Unable to calculate,Unable to calculate
+Positive Tendency/Tonality,20,NA,0.6,NA,NA,NA,NA,Good,Unable to calculate,Unable to calculate

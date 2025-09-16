@@ -1,0 +1,259 @@
+code,n_units,units_with_any_disagreement,units_with_exactly_one_disagreement,prop_with_any_disagreement,prop_with_exactly_one_disagreement,mean_n_disagree
+Type of Attack__Attack on political issues/achievements/ideologies_bin,20,11,5,0.55,0.25,0.85
+Theme of the Image/Video__Political positioning_bin,20,10,4,0.5,0.2,0.8
+Actors__Ordinary people / average citizens / ordinary supporters_bin,20,10,6,0.5,0.3,0.7
+People in the Image/Video__Ordinary_people___average_citizens___ordinary_supporters__e_g___individuals_as_well_as_groups_of_citizens_such_as_teachers__pensioners__students__caregivers__etc___bin,20,9,3,0.45,0.15,0.75
+Names of Actors__x_bin,20,9,7,0.45,0.35,0.55
+"Theme of the Image/Video__Humor / Satire (depictions used to mock, exaggerate, or parody)_bin",20,8,7,0.4,0.35,0.45
+Target of Acclaim__PVV_bin,20,7,5,0.35,0.25,0.45
+Topics__political_parties_and_politicians_candidate_presentation_politicians_as_the_main_subject_bin,20,7,5,0.35,0.25,0.45
+Type of Acclaim__Acclaim/Praise/Recognition of a person/party/organization/institution_bin,20,7,5,0.35,0.25,0.45
+Type of Attack__Attack on a person/party/organization/institution_bin,20,7,7,0.35,0.35,0.35
+Theme of the Image/Video__Negative imagery/Negative campaigning: The image/video portrays the political opponent in a negative light. This can happen through sharp criticism or with humor._bin,20,6,2,0.3,0.1,0.5
+Topics__call_to_vote_get_out_the_vote_call_without_and_with_naming_of_party_s_bin,20,6,4,0.3,0.2,0.4
+"Theme of the Image/Video__Positive imagery/Acclaims: The image/video portrays past and future achievements of the party/government in a positive light. This includes drawing a positive balance, saying “thank you” to campaign helpers, or positively discussing political plans/goals._bin",20,5,3,0.25,0.15,0.35
+AI Image/Video (AI or not),20,5,4,0.25,0.2,0.3
+Actors__PVV: Geert Wilders_bin,20,5,4,0.25,0.2,0.3
+Theme of the Image/Video__Symbolic image of person(s)/politician(s)/citizen(s) looking directly into the camera (classic campaign poster image)._bin,20,5,4,0.25,0.2,0.3
+Type of Acclaim__Acclaim/Praise/Recognition of political issues/achievements/ideologies_bin,20,5,4,0.25,0.2,0.3
+Topics__domestic_and_migration_policy_public_safety_crime_incl_femicide_political_radicalism_religious_fanaticism_terrorism_bin,20,5,5,0.25,0.25,0.25
+Target of Acclaim__PVV: Geert Wilders_bin,20,4,2,0.2,0.1,0.3
+Topics__economy_and_finance_bin,20,4,2,0.2,0.1,0.3
+"Theme of the Image/Video__Events/Landscape & city scenes: Unlike a symbolic image, people/politicians are doing something, moving, or working (e.g., groups such as politicians, refugees, farmers, protesters, police officers, etc.). Alternatively, a city or (natural) landscape is shown where something is happening (e.g., forest dieback, fire, or flooding, nuclear power plants or wind turbines)._bin",20,4,3,0.2,0.15,0.25
+Actors__(Members of) minorities_bin,20,4,4,0.2,0.2,0.2
+"Actors__Europe/EU/NATO, EU/NATO institutions and bodies & their representatives_bin",20,4,4,0.2,0.2,0.2
+Actors__PVV_bin,20,4,4,0.2,0.2,0.2
+Topics__labor_and_social_issues_bin,20,4,4,0.2,0.2,0.2
+Actors__(Representatives of) non-political institutions_bin,20,3,1,0.15,0.05,0.25
+"Actors__Illegal actors, criminals, offenders, terrorists, extremists / extremist groups_bin",20,3,2,0.15,0.1,0.2
+Actors__VVD_bin,20,3,2,0.15,0.1,0.2
+People in the Image/Video___Members_of__minorities__e_g___refugees__LGBTQ___people_with_disabilities__Jewish_people__women__when_women_are_explicitly_labeled__depicted__or_referred_to_as_a_minority__bin,20,3,2,0.15,0.1,0.2
+Topics__europe_bin,20,3,2,0.15,0.1,0.2
+Type of Attack__Other form of attack/negative tonality_bin,20,3,2,0.15,0.1,0.2
+Actors__(Representatives of) social movements_bin,20,3,3,0.15,0.15,0.15
+"Actors__Dutch government, ministries, parliament, and courts (ALSO KABINET SCHOOF)_bin",20,3,3,0.15,0.15,0.15
+People in the Image/Video__Representatives_of_non_political_institutions__e_g___police__churches__military__other_public_institutions__bin,20,3,3,0.15,0.15,0.15
+"Target of Attack__Europe/EU/NATO, EU/NATO institutions and bodies & their representatives_bin",20,3,3,0.15,0.15,0.15
+Theme of the Image/Video__Event announcement/Election call/Candidate presentation_bin,20,3,3,0.15,0.15,0.15
+Topics__environmental_and_energy_policy_bin,20,3,3,0.15,0.15,0.15
+Actors__D66: Rob Jetten_bin,20,2,1,0.1,0.05,0.15
+Actors__D66_bin,20,2,1,0.1,0.05,0.15
+People in the Image/Video__D66__Rob_Jetten_bin,20,2,1,0.1,0.05,0.15
+People in the Image/Video__Illegal_actors__criminals__offenders__terrorists__extremists___extremist_groups__Actors_who_commit_generally_criminally_relevant_actions_without_being_associated_with_a_specific_party__business___non_terrorist__organization__or__non_extremist__social_movement__please_code_them_accordingly___actors_who_plan_and_carry_out_criminal_activities_in_a_structured_group__actors_who_use_violence_bin,20,2,1,0.1,0.05,0.15
+Target of Attack__(Members of) minorities_bin,20,2,1,0.1,0.05,0.15
+Theme of the Image/Video__Other imagery_bin,20,2,1,0.1,0.05,0.15
+Topics__education_and_culture_bin,20,2,1,0.1,0.05,0.15
+Topics__foreign_security_and_defense_policy_bin,20,2,1,0.1,0.05,0.15
+Actors__GL-PvdA: Frans Timmermans_bin,20,2,2,0.1,0.1,0.1
+Actors__GL-PvdA_bin,20,2,2,0.1,0.1,0.1
+People in the Image/Video__Foreign_politicians_from_EU__UN__NATO_bin,20,2,2,0.1,0.1,0.1
+People in the Image/Video__GL_PvdA__Frans_Timmermans_bin,20,2,2,0.1,0.1,0.1
+People in the Image/Video__PVV__Geert_Wilders_bin,20,2,2,0.1,0.1,0.1
+People in the Image/Video__Representatives_of_social_movements__e_g___Fridays_for_Future__Identitarian_Movement__QAnon___MeToo_movement__bin,20,2,2,0.1,0.1,0.1
+Target of Attack__GL-PvdA: Frans Timmermans_bin,20,2,2,0.1,0.1,0.1
+Target of Attack__GL-PvdA_bin,20,2,2,0.1,0.1,0.1
+"Target of Attack__Illegal actors, criminals, offenders, terrorists, extremists / extremist groups_bin",20,2,2,0.1,0.1,0.1
+Topics__election_in_general_electoral_system_campaign_events_campaign_dates_campaign_appearances_election_polls_bin,20,2,2,0.1,0.1,0.1
+Topics__housing_crisis_bin,20,2,2,0.1,0.1,0.1
+Actors__FvD_bin,20,1,0,0.05,0,0.1
+Names of Actors__Greta_Thunberg_bin,20,1,0,0.05,0,0.1
+People in the Image/Video__Other_VVD_politicians_bin,20,1,0,0.05,0,0.1
+Target of Acclaim__(Members of) minorities_bin,20,1,0,0.05,0,0.1
+Target of Acclaim__Other parties from the Netherlands_bin,20,1,0,0.05,0,0.1
+Theme of the Image/Video__Image from a campaign event_bin,20,1,0,0.05,0,0.1
+Actors__CDA: Hanneke Steen_bin,20,1,1,0.05,0.05,0.05
+Actors__CDA_bin,20,1,1,0.05,0.05,0.05
+Actors__CU_bin,20,1,1,0.05,0.05,0.05
+Actors__Celebrities and/or opinion leaders_bin,20,1,1,0.05,0.05,0.05
+Actors__Other actors_bin,20,1,1,0.05,0.05,0.05
+Actors__PvdD: Esther Ouwehand_bin,20,1,1,0.05,0.05,0.05
+Actors__PvdD_bin,20,1,1,0.05,0.05,0.05
+Actors__SP_bin,20,1,1,0.05,0.05,0.05
+Names of Actors__Leeuwinga_bin,20,1,1,0.05,0.05,0.05
+Names of Actors__Lezaire_bin,20,1,1,0.05,0.05,0.05
+Names of Actors__Muslim_bin,20,1,1,0.05,0.05,0.05
+Names of Actors__Nooter_bin,20,1,1,0.05,0.05,0.05
+Names of Actors__Peelen_bin,20,1,1,0.05,0.05,0.05
+Names of Actors__Plak_Schouten_bin,20,1,1,0.05,0.05,0.05
+Names of Actors__Rood_de_Wit_bin,20,1,1,0.05,0.05,0.05
+Names of Actors__Ruijter_bin,20,1,1,0.05,0.05,0.05
+Names of Actors__Thunberg_bin,20,1,1,0.05,0.05,0.05
+Names of Actors__Visser_bin,20,1,1,0.05,0.05,0.05
+Names of Actors__X_bin,20,1,1,0.05,0.05,0.05
+People in the Image/Video__CDA__Hanneke_Steen_bin,20,1,1,0.05,0.05,0.05
+People in the Image/Video__Celebrities_and_or_opinion_leaders__e_g___actors__sports_figures_athletes__musicians__economists__social_media_influencers__bin,20,1,1,0.05,0.05,0.05
+People in the Image/Video__Other_persons_bin,20,1,1,0.05,0.05,0.05
+People in the Image/Video__Other_politicians_from_Dutch_parties___independent_politicians_bin,20,1,1,0.05,0.05,0.05
+People in the Image/Video__PvdD__Esther_Ouwehand_bin,20,1,1,0.05,0.05,0.05
+Target of Attack__CDA: Hanneke Steen_bin,20,1,1,0.05,0.05,0.05
+Target of Attack__CDA_bin,20,1,1,0.05,0.05,0.05
+"Target of Attack__Dutch government, ministries, parliament, and courts (ALSO KABINET SCHOOF)_bin",20,1,1,0.05,0.05,0.05
+Target of Attack__Ordinary people / average citizens / ordinary supporters_bin,20,1,1,0.05,0.05,0.05
+Target of Attack__Other actors_bin,20,1,1,0.05,0.05,0.05
+Target of Attack__PVV: Geert Wilders_bin,20,1,1,0.05,0.05,0.05
+Target of Attack__PVV_bin,20,1,1,0.05,0.05,0.05
+Target of Attack__PvdD: Esther Ouwehand_bin,20,1,1,0.05,0.05,0.05
+Target of Attack__PvdD_bin,20,1,1,0.05,0.05,0.05
+Theme of the Image/Video__Fantasy / futuristic scenarios or depictions of imagined or speculative realities (utopian or dystopian future Netherlands)_bin,20,1,1,0.05,0.05,0.05
+Theme of the Image/Video__Nostalgic / historical Dutch imagery (references to glorified past or national symbols)_bin,20,1,1,0.05,0.05,0.05
+Topics__other_political_topic_bin,20,1,1,0.05,0.05,0.05
+"Actors__(Representatives of) interest groups, NGOs_bin",20,0,0,0,0,0
+Actors__: _bin,20,0,0,0,0,0
+Actors__BBB_bin,20,0,0,0,0,0
+Actors__Companies / business leaders_bin,20,0,0,0,0,0
+Actors__Denk_bin,20,0,0,0,0,0
+"Actors__Foreign politicians or parties and/or foreign governments, foreign parliaments_bin",20,0,0,0,0,0
+Actors__Gevestigde partijen_bin,20,0,0,0,0,0
+"Actors__Governments, ministries, parliaments and courts of the provinces_bin",20,0,0,0,0,0
+Actors__JA21_bin,20,0,0,0,0,0
+Actors__NA: NA_bin,20,0,0,0,0,0
+Actors__NSC_bin,20,0,0,0,0,0
+Actors__News media and their journalists / representatives_bin,20,0,0,0,0,0
+Actors__Other parties from the Netherlands_bin,20,0,0,0,0,0
+Actors__Other politicians from Dutch parties_bin,20,0,0,0,0,0
+Actors__Partijkartel_bin,20,0,0,0,0,0
+Actors__SGP_bin,20,0,0,0,0,0
+Actors__Volt_bin,20,0,0,0,0,0
+Names of Actors__NA_bin,20,0,0,0,0,0
+People in the Image/Video__BBB__Caroline_van_der_Plas_bin,20,0,0,0,0,0
+People in the Image/Video__BBB__Eddie_van_Marum_bin,20,0,0,0,0,0
+People in the Image/Video__BBB__Femke_Wiersma_bin,20,0,0,0,0,0
+People in the Image/Video__BBB__Gijs_Tuinman_bin,20,0,0,0,0,0
+People in the Image/Video__BBB__Jean_Rummenie_bin,20,0,0,0,0,0
+People in the Image/Video__BBB__Mona_Keijzer_bin,20,0,0,0,0,0
+People in the Image/Video__CDA__Henri_Bontenbal_bin,20,0,0,0,0,0
+People in the Image/Video__CU__Mirjam_Bikker_bin,20,0,0,0,0,0
+People in the Image/Video__CU__Pieter_Grinwis_bin,20,0,0,0,0,0
+People in the Image/Video__D66__Hans_Vijlbrief_bin,20,0,0,0,0,0
+People in the Image/Video__D66__Jan_Paternotte_bin,20,0,0,0,0,0
+People in the Image/Video__D66__Paul_van_Meenen_bin,20,0,0,0,0,0
+People in the Image/Video__Denk__Stephan_van_Baarle_bin,20,0,0,0,0,0
+People in the Image/Video__Denk__Tunahan_Kuzu_bin,20,0,0,0,0,0
+People in the Image/Video__Entrepreneurs___business_leaders__e_g___from_VW__Porsche__Daimler__Amazon__Google__Facebook__bin,20,0,0,0,0,0
+People in the Image/Video__Foreign_politicians__ALL_EXCEPT_from_EU__UN__NATO__bin,20,0,0,0,0,0
+People in the Image/Video__FvD__Gideon_van_Meijeren_bin,20,0,0,0,0,0
+People in the Image/Video__FvD__Thierry_Baudet_bin,20,0,0,0,0,0
+People in the Image/Video__GL_PvdA__Esmah_Lahlah_bin,20,0,0,0,0,0
+People in the Image/Video__GL_PvdA__Femke_Halsema_bin,20,0,0,0,0,0
+People in the Image/Video__GL_PvdA__Jesse_Klaver_bin,20,0,0,0,0,0
+People in the Image/Video__GL_PvdA__Marjolein_Moorman_bin,20,0,0,0,0,0
+People in the Image/Video__GL_PvdA__Mei_Li_Vos_bin,20,0,0,0,0,0
+People in the Image/Video__JA21__Annabel_Nanninga_bin,20,0,0,0,0,0
+People in the Image/Video__JA21__Ingrid_Coenradie_bin,20,0,0,0,0,0
+People in the Image/Video__JA21__Joost_Eerdmans_bin,20,0,0,0,0,0
+People in the Image/Video__Journalists__representatives_of_news_media__general__media_types__individual_media_outlets__bin,20,0,0,0,0,0
+People in the Image/Video__NSC__Caspar_Veldkamp_bin,20,0,0,0,0,0
+People in the Image/Video__NSC__Dani_lle_Jansen_bin,20,0,0,0,0,0
+People in the Image/Video__NSC__Eddy_van_Hijum_bin,20,0,0,0,0,0
+People in the Image/Video__NSC__Eppo_Bruins_bin,20,0,0,0,0,0
+People in the Image/Video__NSC__Judith_Uitermark_bin,20,0,0,0,0,0
+People in the Image/Video__NSC__Nicolien_van_Vroonhoven_bin,20,0,0,0,0,0
+People in the Image/Video__NSC__Teun_Struycken_bin,20,0,0,0,0,0
+People in the Image/Video__NSC__Tjebbe_van_Oostenbruggen_bin,20,0,0,0,0,0
+People in the Image/Video__Other_BBB_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__Other_CDA_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__Other_CU_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__Other_D66_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__Other_Denk_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__Other_FVD_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__Other_GL_PvdA_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__Other_JA21_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__Other_NSC_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__Other_PVV_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__Other_PvdD_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__Other_SGP_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__Other_SP_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__Other_Volt_politicians_bin,20,0,0,0,0,0
+People in the Image/Video__PVV__Barry_Madlener_bin,20,0,0,0,0,0
+People in the Image/Video__PVV__Chris_Jansen_bin,20,0,0,0,0,0
+People in the Image/Video__PVV__Dirk_Beljaarts_bin,20,0,0,0,0,0
+People in the Image/Video__PVV__Fleur_Agema_bin,20,0,0,0,0,0
+People in the Image/Video__PVV__Marjolein_Faber_bin,20,0,0,0,0,0
+People in the Image/Video__PVV__Martin_Bosma_bin,20,0,0,0,0,0
+People in the Image/Video__PVV__Reinette_Klever_bin,20,0,0,0,0,0
+People in the Image/Video__PVV__Vicky_Maeijer_bin,20,0,0,0,0,0
+People in the Image/Video__PVV__Zsolt_Szab__bin,20,0,0,0,0,0
+People in the Image/Video__PvdD__Ines_Kosti__bin,20,0,0,0,0,0
+People in the Image/Video__Representatives_of_interest_groups___NGOs__e_g___Greenpeace__Amnesty_International__Doctors_Without_Borders__Reporters_Without_Borders__trade_unions__employers__associations__lobbyists__bin,20,0,0,0,0,0
+People in the Image/Video__SGP__Chris_Stoffer_bin,20,0,0,0,0,0
+People in the Image/Video__SP__Jimmy_Dijk_bin,20,0,0,0,0,0
+People in the Image/Video__VVD__David_van_Weel_bin,20,0,0,0,0,0
+People in the Image/Video__VVD__Dilan_Ye_ilg_z_bin,20,0,0,0,0,0
+People in the Image/Video__VVD__Eelco_Heinen_bin,20,0,0,0,0,0
+People in the Image/Video__VVD__Jurgen_Nobel_bin,20,0,0,0,0,0
+People in the Image/Video__VVD__Mari_lle_Paul_bin,20,0,0,0,0,0
+People in the Image/Video__VVD__Ruben_Brekelmans_bin,20,0,0,0,0,0
+People in the Image/Video__VVD__Sophie_Hermans_bin,20,0,0,0,0,0
+People in the Image/Video__VVD__Vincent_Karremans_bin,20,0,0,0,0,0
+People in the Image/Video__Volt__Laurens_Dassen_bin,20,0,0,0,0,0
+People in the Image/Video__Volt__Marieke_Koekkoek_bin,20,0,0,0,0,0
+"Target of Acclaim__(Representatives of) interest groups, NGOs_bin",20,0,0,0,0,0
+Target of Acclaim__(Representatives of) non-political institutions_bin,20,0,0,0,0,0
+Target of Acclaim__(Representatives of) social movements_bin,20,0,0,0,0,0
+Target of Acclaim__: _bin,20,0,0,0,0,0
+Target of Acclaim__BBB_bin,20,0,0,0,0,0
+Target of Acclaim__CDA_bin,20,0,0,0,0,0
+Target of Acclaim__CU_bin,20,0,0,0,0,0
+Target of Acclaim__Celebrities and/or opinion leaders_bin,20,0,0,0,0,0
+Target of Acclaim__Companies / business leaders_bin,20,0,0,0,0,0
+Target of Acclaim__D66_bin,20,0,0,0,0,0
+Target of Acclaim__Denk_bin,20,0,0,0,0,0
+"Target of Acclaim__Dutch government, ministries, parliament, and courts (ALSO KABINET SCHOOF)_bin",20,0,0,0,0,0
+"Target of Acclaim__Europe/EU/NATO, EU/NATO institutions and bodies & their representatives_bin",20,0,0,0,0,0
+"Target of Acclaim__Foreign politicians or parties and/or foreign governments, foreign parliaments_bin",20,0,0,0,0,0
+Target of Acclaim__FvD_bin,20,0,0,0,0,0
+Target of Acclaim__GL-PvdA_bin,20,0,0,0,0,0
+"Target of Acclaim__Governments, ministries, parliaments and courts of the provinces_bin",20,0,0,0,0,0
+"Target of Acclaim__Illegal actors, criminals, offenders, terrorists, extremists / extremist groups_bin",20,0,0,0,0,0
+Target of Acclaim__JA21_bin,20,0,0,0,0,0
+Target of Acclaim__NA: NA_bin,20,0,0,0,0,0
+Target of Acclaim__NSC_bin,20,0,0,0,0,0
+Target of Acclaim__News media and their journalists / representatives_bin,20,0,0,0,0,0
+Target of Acclaim__No actor praised_bin,20,0,0,0,0,0
+Target of Acclaim__Ordinary people / average citizens / ordinary supporters_bin,20,0,0,0,0,0
+Target of Acclaim__Other actors_bin,20,0,0,0,0,0
+Target of Acclaim__Other politicians from Dutch parties_bin,20,0,0,0,0,0
+Target of Acclaim__PvdD_bin,20,0,0,0,0,0
+Target of Acclaim__SGP_bin,20,0,0,0,0,0
+Target of Acclaim__SP_bin,20,0,0,0,0,0
+Target of Acclaim__VVD_bin,20,0,0,0,0,0
+Target of Acclaim__Volt_bin,20,0,0,0,0,0
+"Target of Attack__(Representatives of) interest groups, NGOs_bin",20,0,0,0,0,0
+Target of Attack__(Representatives of) non-political institutions_bin,20,0,0,0,0,0
+Target of Attack__(Representatives of) social movements_bin,20,0,0,0,0,0
+Target of Attack__: _bin,20,0,0,0,0,0
+Target of Attack__BBB_bin,20,0,0,0,0,0
+Target of Attack__CU_bin,20,0,0,0,0,0
+Target of Attack__Celebrities and/or opinion leaders_bin,20,0,0,0,0,0
+Target of Attack__Companies / business leaders_bin,20,0,0,0,0,0
+Target of Attack__D66: Rob Jetten_bin,20,0,0,0,0,0
+Target of Attack__D66_bin,20,0,0,0,0,0
+Target of Attack__Denk_bin,20,0,0,0,0,0
+"Target of Attack__Foreign politicians or parties and/or foreign governments, foreign parliaments_bin",20,0,0,0,0,0
+Target of Attack__FvD_bin,20,0,0,0,0,0
+"Target of Attack__Governments, ministries, parliaments and courts of the provinces_bin",20,0,0,0,0,0
+Target of Attack__JA21_bin,20,0,0,0,0,0
+Target of Attack__NA: NA_bin,20,0,0,0,0,0
+Target of Attack__NSC_bin,20,0,0,0,0,0
+Target of Attack__News media and their journalists / representatives_bin,20,0,0,0,0,0
+Target of Attack__No actor attacked_bin,20,0,0,0,0,0
+Target of Attack__Other parties from the Netherlands_bin,20,0,0,0,0,0
+Target of Attack__Other politicians from Dutch parties_bin,20,0,0,0,0,0
+Target of Attack__SGP_bin,20,0,0,0,0,0
+Target of Attack__SP_bin,20,0,0,0,0,0
+Target of Attack__VVD_bin,20,0,0,0,0,0
+Target of Attack__Volt_bin,20,0,0,0,0,0
+Theme of the Image/Video__: _bin,20,0,0,0,0,0
+Theme of the Image/Video__Everyday politics_bin,20,0,0,0,0,0
+Theme of the Image/Video__Individual voter contact_bin,20,0,0,0,0,0
+Theme of the Image/Video__Media work (incl. TV debate)_bin,20,0,0,0,0,0
+Theme of the Image/Video__NA: NA_bin,20,0,0,0,0,0
+Theme of the Image/Video__Private background story_bin,20,0,0,0,0,0
+Topics__civil_rights_including_gender_politics_lgbtq_policies_bin,20,0,0,0,0,0
+Topics__constitution_of_the_political_system_e_g_independence_of_the_judiciary_rule_of_law_parliamentary_representation_of_the_will_of_the_people_bin,20,0,0,0,0,0
+Topics__digital_and_infrastructure_bin,20,0,0,0,0,0
+Type of Acclaim__: _bin,20,0,0,0,0,0
+Type of Acclaim__NA: NA_bin,20,0,0,0,0,0
+Type of Acclaim__Other form of recognition/praise_bin,20,0,0,0,0,0
+Type of Attack__: _bin,20,0,0,0,0,0
+Type of Attack__NA: NA_bin,20,0,0,0,0,0

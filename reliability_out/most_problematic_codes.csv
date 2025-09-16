@@ -1,0 +1,21 @@
+code,n_units,n_coders,percent_agreement,krippendorff_alpha,cohen_kappa,fleiss_kappa,scott_pi,status,krippendorff_interpretation,kappa_interpretation
+AI Image/Video,20,NA,0.4,NA,NA,NA,NA,Moderate,Unable to calculate,Unable to calculate
+Type of Attack__Attack on political issues/achievements/ideologies_bin,20,4,0.45,0.16411084207694382,NA,0.16061339790153392,NA,Calculated,Very Poor,Very Poor
+Theme of the Image/Video__Political positioning_bin,20,4,0.5,0.37760416666666663,NA,0.37500000000000033,NA,Calculated,Poor,Poor
+Actors__Ordinary people / average citizens / ordinary supporters_bin,20,4,0.5,0.4227053140096618,NA,0.42028985507246425,NA,Calculated,Moderate,Moderate
+People in the Image/Video__Ordinary_people___average_citizens___ordinary_supporters__e_g___individuals_as_well_as_groups_of_citizens_such_as_teachers__pensioners__students__caregivers__etc___bin,20,4,0.55,0.4349881796690307,NA,0.43262411347517776,NA,Calculated,Moderate,Moderate
+Names of Actors__x_bin,20,4,0.55,0.5159578182833997,NA,0.5139325371883517,NA,Calculated,Moderate,Moderate
+"Theme of the Image/Video__Humor / Satire (depictions used to mock, exaggerate, or parody)_bin",20,4,0.6,0.38012241933810564,NA,0.3775287892934961,NA,Calculated,Poor,Poor
+Positive Tendency/Tonality,20,NA,0.6,NA,NA,NA,NA,Good,Unable to calculate,Unable to calculate
+Type of Acclaim__Acclaim/Praise/Recognition of a person/party/organization/institution_bin,20,4,0.65,0.19528619528619529,NA,0.1919191919191929,NA,Calculated,Very Poor,Very Poor
+Topics__political_parties_and_politicians_candidate_presentation_politicians_as_the_main_subject_bin,20,4,0.65,0.19528619528619529,NA,0.1919191919191929,NA,Calculated,Very Poor,Very Poor
+Target of Acclaim__PVV_bin,20,4,0.65,0.29876259727005994,NA,0.2958285495598938,NA,Calculated,Poor,Poor
+Type of Attack__Attack on a person/party/organization/institution_bin,20,4,0.65,0.5746249682176456,NA,0.5728451563691845,NA,Calculated,Moderate,Moderate
+Theme of the Image/Video__Negative imagery/Negative campaigning: The image/video portrays the political opponent in a negative light. This can happen through sharp criticism or with humor._bin,20,4,0.7,0.5131481481481481,NA,0.511111111111112,NA,Calculated,Moderate,Moderate
+Topics__call_to_vote_get_out_the_vote_call_without_and_with_naming_of_party_s_bin,20,4,0.7,0.6352258852258852,NA,0.6336996336996342,NA,Calculated,Moderate,Good
+Theme of the Image/Video__Symbolic image of person(s)/politician(s)/citizen(s) looking directly into the camera (classic campaign poster image)._bin,20,4,0.75,0.04304304304304307,NA,0.03903903903904113,NA,Calculated,Very Poor,Very Poor
+Type of Acclaim__Acclaim/Praise/Recognition of political issues/achievements/ideologies_bin,20,4,0.75,0.04304304304304307,NA,0.03903903903904193,NA,Calculated,Very Poor,Very Poor
+"Theme of the Image/Video__Positive imagery/Acclaims: The image/video portrays past and future achievements of the party/government in a positive light. This includes drawing a positive balance, saying “thank you” to campaign helpers, or positively discussing political plans/goals._bin",20,4,0.75,0.11654707545118503,NA,0.11285061969993643,NA,Calculated,Very Poor,Very Poor
+AI Image/Video (AI or not),20,4,0.75,0.7167407407407407,NA,0.71555555555555606,NA,Calculated,Good,Good
+Actors__PVV: Geert Wilders_bin,20,4,0.75,0.7337788916736285,NA,0.7326649958228911,NA,Calculated,Good,Good
+Topics__domestic_and_migration_policy_public_safety_crime_incl_femicide_political_radicalism_religious_fanaticism_terrorism_bin,20,4,0.75,0.7431764453041049,NA,0.7421018697614448,NA,Calculated,Good,Good

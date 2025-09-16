@@ -1,0 +1,461 @@
+---
+title: "Intercoder Reliability Dashboard"
+subtitle: "Campaign Track Analysis"
+author: "Coding Team"
+date: today
+format:
+  html:
+    theme: flatly
+    toc: true
+    toc-depth: 3
+    toc-float: true
+    code-fold: show
+    code-tools: true
+    css: |
+      .disagreement { 
+        background-color: #ffebee; 
+        border-left: 4px solid #f44336; 
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 4px;
+      }
+      .agreement { 
+        background-color: #e8f5e8; 
+        border-left: 4px solid #4caf50; 
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 4px;
+      }
+      .image-container { 
+        text-align: center; 
+        margin: 20px 0; 
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+      .image-container img { 
+        max-width: 100%; 
+        height: auto; 
+        border-radius: 4px;
+      }
+      .code-comparison { 
+        margin: 10px 0; 
+        padding: 15px; 
+        border-radius: 5px; 
+      }
+      .summary-box { 
+        background-color: #f5f5f5; 
+        padding: 20px; 
+        border-radius: 8px; 
+        margin: 20px 0; 
+      }
+      .metric-box { 
+        display: inline-block; 
+        margin: 10px; 
+        padding: 15px; 
+        background-color: white; 
+        border-radius: 5px; 
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+      }
+      .krippendorff-excellent { color: #2e7d32; font-weight: bold; }
+      .krippendorff-good { color: #388e3c; font-weight: bold; }
+      .krippendorff-moderate { color: #f57c00; font-weight: bold; }
+      .krippendorff-poor { color: #d32f2f; font-weight: bold; }
+      .krippendorff-very-poor { color: #b71c1c; font-weight: bold; }
+      .problematic-code {
+        background-color: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 8px;
+        margin: 4px 0;
+        border-radius: 4px;
+      }
+      .excellent-code {
+        background-color: #e8f5e8;
+        border-left: 4px solid #4caf50;
+        padding: 8px;
+        margin: 4px 0;
+        border-radius: 4px;
+      }
+      .screenshot-container {
+        text-align: center;
+        margin: 20px 0;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+      .screenshot-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+---
+
+```{r setup, include=FALSE}
+# Load required packages
+library(tidyverse)
+library(DT)
+library(webshot2)
+library(htmlwidgets)
+library(here)
+
+# Source the reliability analysis
+source("irr.R")
+
+# Create screenshots directory
+if (!dir.exists("screenshots")) {
+  dir.create("screenshots")
+}
+
+# Function to take screenshot if it doesn't exist
+take_screenshot <- function(url, filename) {
+  screenshot_path <- here("screenshots", filename)
+  
+  if (!file.exists(screenshot_path)) {
+    tryCatch({
+      webshot2::webshot(url, screenshot_path, 
+                       vwidth = 1200, vheight = 800,
+                       delay = 2)
+      cat("Screenshot saved:", screenshot_path, "\n")
+    }, error = function(e) {
+      cat("Failed to take screenshot for", url, ":", e$message, "\n")
+    })
+  } else {
+    cat("Screenshot already exists:", screenshot_path, "\n")
+  }
+  
+  return(screenshot_path)
+}
+
+# Function to generate image HTML with screenshot
+generate_image_html_with_screenshot <- function(url) {
+  # Create filename from URL
+  filename <- gsub("[^a-zA-Z0-9]", "_", url)
+  filename <- paste0(filename, ".png")
+  
+  # Take screenshot
+  screenshot_path <- take_screenshot(url, filename)
+  
+  # Generate HTML
+  paste0(
+    '<div class="screenshot-container">',
+    '<h5>Post Screenshot</h5>',
+    '<img src="', screenshot_path, '" alt="Screenshot of post" />',
+    '<p><a href="', url, '" target="_blank">View Original Post</a></p>',
+    '</div>'
+  )
+}
+
+# Debug output
+cat("=== DEBUGGING DATA STRUCTURE ===\n")
+cat("Number of URLs:", length(unique_urls), "\n")
+cat("Number of coders:", length(coders), "\n")
+cat("Number of binary codes:", length(setdiff(names(bin_df), c("coder", "url"))), "\n")
+cat("Sample URLs:\n")
+print(head(unique_urls, 3))
+cat("================================\n\n")
+```
+
+# Intercoder Reliability Dashboard
+
+This dashboard allows you to review coding results for each piece of content and identify areas of disagreement between coders. Perfect for coder training and identifying problematic codes.
+
+## Summary of Biggest Disagreements
+
+```{r summary-disagreements, results='asis'}
+# Get the biggest disagreements
+biggest_disagreements <- code_summary |>
+  arrange(desc(prop_with_any_disagreement), desc(mean_n_disagree)) |>
+  head(10)
+
+cat("### Top 10 Codes with Most Disagreements\n\n")
+
+for (i in 1:nrow(biggest_disagreements)) {
+  row <- biggest_disagreements[i, ]
+  cat(sprintf("**%d. [%s](#content-review)**\n", i, row$code))
+  cat(sprintf("- Total disagreements: %d\n", row$units_with_any_disagreement))
+  cat(sprintf("- Units with disagreement: %d\n", row$units_with_any_disagreement))
+  cat(sprintf("- Average disagreements per unit: %.2f\n\n", row$mean_n_disagreement))
+}
+```
+
+## Reliability Overview
+
+```{r reliability-overview, results='asis'}
+# Calculate reliability summary
+total_codes <- nrow(reliability_stats)
+excellent_codes <- sum(reliability_stats$krippendorff_interpretation == "Excellent", na.rm = TRUE)
+good_codes <- sum(reliability_stats$krippendorff_interpretation == "Good", na.rm = TRUE)
+moderate_codes <- sum(reliability_stats$krippendorff_interpretation == "Moderate", na.rm = TRUE)
+poor_codes <- sum(reliability_stats$krippendorff_interpretation %in% c("Poor", "Very Poor"), na.rm = TRUE)
+
+cat('<div class="summary-box">')
+cat('<h3>Reliability Summary</h3>')
+cat(sprintf('<div class="metric-box"><strong>Total Codes:</strong> %d</div>', total_codes))
+cat(sprintf('<div class="metric-box"><strong>Excellent (α ≥ 0.8):</strong> <span class="krippendorff-excellent">%d (%.1f%%)</span></div>', 
+            excellent_codes, round(100 * excellent_codes / total_codes, 1)))
+cat(sprintf('<div class="metric-box"><strong>Good (α ≥ 0.67):</strong> <span class="krippendorff-good">%d (%.1f%%)</span></div>', 
+            good_codes, round(100 * good_codes / total_codes, 1)))
+cat(sprintf('<div class="metric-box"><strong>Moderate (α ≥ 0.4):</strong> <span class="krippendorff-moderate">%d (%.1f%%)</span></div>', 
+            moderate_codes, round(100 * moderate_codes / total_codes, 1)))
+cat(sprintf('<div class="metric-box"><strong>Poor (α < 0.4):</strong> <span class="krippendorff-poor">%d (%.1f%%)</span></div>', 
+            poor_codes, round(100 * poor_codes / total_codes, 1)))
+cat('</div>')
+```
+
+## Problematic Codes for Training
+
+```{r problematic-codes-training, results='asis'}
+# Get most problematic codes for training
+problematic_codes <- reliability_stats |>
+  filter(n_units > 0) |>
+  arrange(percent_agreement, krippendorff_alpha) |>
+  head(15)
+
+cat("### Codes Needing Attention (Lowest Reliability)\n\n")
+
+for (i in 1:nrow(problematic_codes)) {
+  row <- problematic_codes[i, ]
+  interpretation <- row$krippendorff_interpretation
+  
+  cat(sprintf('<div class="problematic-code">'))
+  cat(sprintf('<strong>%d. %s</strong><br/>', i, row$code))
+  cat(sprintf('Agreement: %.1f%% | Krippendorff α: %s | Interpretation: %s', 
+              row$percent_agreement * 100, 
+              ifelse(is.na(row$krippendorff_alpha), "N/A", sprintf("%.3f", row$krippendorff_alpha)),
+              interpretation))
+  cat('</div>\n\n')
+}
+```
+
+## Content Review {#content-review}
+
+```{r content-tabs, results='asis'}
+# Create content review for each URL using Quarto tabsets
+cat("\n### Content Review {.tabset}\n\n")
+
+for (i in 1:length(unique_urls)) {
+  current_url <- unique_urls[i]
+  
+  cat(sprintf("\n#### Content %d\n\n", i))
+  
+  # URL display
+  cat(sprintf("**URL:** %s\n\n", current_url))
+  
+  # Generate screenshot
+  cat(generate_image_html_with_screenshot(current_url))
+  
+  # Get data for this URL
+  url_data <- bin_df |> filter(url == current_url)
+  
+  # Get disagreement data for this URL
+  url_disagreements <- disagree_long |> filter(url == current_url)
+  
+  # Create coder comparison table
+  cat("##### Coder Results\n\n")
+  
+  # Get all binary columns
+  binary_cols <- setdiff(names(bin_df), c("coder", "url"))
+  
+  # Create comparison table
+  comparison_data <- url_data |>
+    select(coder, all_of(binary_cols)) |>
+    pivot_longer(cols = -coder, names_to = "code", values_to = "value") |>
+    pivot_wider(names_from = coder, values_from = value)
+  
+  # Calculate disagreement status
+  numeric_cols <- select(comparison_data, where(is.numeric))
+  comparison_data <- comparison_data |>
+    mutate(
+      has_disagreement = rowSums(numeric_cols, na.rm = TRUE) > 0 & 
+                        rowSums(numeric_cols, na.rm = TRUE) < ncol(numeric_cols),
+      agreement_class = ifelse(has_disagreement, "disagreement", "agreement")
+    )
+  
+  # Display codes with disagreements first
+  disagreement_codes <- comparison_data |> filter(has_disagreement) |> pull(code)
+  agreement_codes <- comparison_data |> filter(!has_disagreement) |> pull(code)
+  
+  if (length(disagreement_codes) > 0) {
+    cat("###### Codes with Disagreements\n\n")
+    
+    for (code in disagreement_codes) {
+      code_data <- comparison_data |> filter(code == !!code)
+      
+      cat(sprintf('<div class="disagreement">'))
+      cat(sprintf('<strong>%s</strong><br/>', code))
+      
+      for (coder in coders) {
+        if (coder %in% names(code_data)) {
+          value <- code_data[[coder]]
+          if (!is.na(value) && value == 1) {
+            cat(sprintf('• <strong>%s</strong>: ✓ (1)<br/>', coder))
+          } else if (!is.na(value) && value == 0) {
+            cat(sprintf('• <strong>%s</strong>: ✗ (0)<br/>', coder))
+          } else {
+            cat(sprintf('• <strong>%s</strong>: N/A<br/>', coder))
+          }
+        }
+      }
+      
+      cat('</div>\n\n')
+    }
+  }
+  
+  if (length(agreement_codes) > 0) {
+    cat("###### Codes with Agreement\n\n")
+    
+    # Group agreement codes by their values
+    agreement_data <- comparison_data |> 
+      filter(!has_disagreement)
+    
+    if (nrow(agreement_data) > 0) {
+      # Get numeric columns
+      numeric_cols_agreement <- select(agreement_data, where(is.numeric))
+      coder_names <- names(numeric_cols_agreement)
+      
+      # Create summary manually
+      agreement_summary <- agreement_data |>
+        group_by(code) |>
+        summarise(
+          coders_agreed = paste(coder_names, collapse = ", "),
+          .groups = "drop"
+        )
+      
+      # Add value column manually
+      agreement_summary$value <- 1  # Since these are agreement cases, they all have value 1
+      
+    } else {
+      agreement_summary <- tibble(code = character(), coders_agreed = character(), value = numeric())
+    }
+    
+    if (nrow(agreement_summary) > 0) {
+      cat('<div class="agreement">')
+      for (j in 1:nrow(agreement_summary)) {
+        row <- agreement_summary[j, ]
+        cat(sprintf('• <strong>%s</strong>: ✓ (All coders: %s)<br/>', row$code, row$coders_agreed))
+      }
+      cat('</div>\n\n')
+    }
+  }
+  
+  # Show reliability statistics for this URL
+  if (nrow(url_disagreements) > 0) {
+    cat("###### Reliability Statistics for This Content\n\n")
+    
+    url_reliability <- url_disagreements |>
+      group_by(code) |>
+      summarise(
+        n_disagreements = sum(n_disagree, na.rm = TRUE),
+        n_coders = first(n_coders),
+        .groups = "drop"
+      ) |>
+      arrange(desc(n_disagreements))
+    
+    if (nrow(url_reliability) > 0) {
+      cat("| Code | Disagreements | Coders |\n")
+      cat("|------|---------------|--------|\n")
+      for (j in 1:nrow(url_reliability)) {
+        row <- url_reliability[j, ]
+        cat(sprintf("| %s | %d | %d |\n", row$code, row$n_disagreements, row$n_coders))
+      }
+    }
+  }
+}
+```
+
+## Data Tables
+
+### Complete Reliability Statistics
+
+```{r reliability-table}
+reliability_stats |>
+  select(code, n_units, percent_agreement, krippendorff_alpha, krippendorff_interpretation) |>
+  arrange(percent_agreement) |>
+  DT::datatable(
+    options = list(
+      pageLength = 20,
+      scrollX = TRUE,
+      columnDefs = list(
+        list(className = 'dt-center', targets = c(1, 2, 3, 4))
+      )
+    ),
+    colnames = c(
+      "Code" = "code",
+      "Units" = "n_units",
+      "Agreement %" = "percent_agreement",
+      "Krippendorff's α" = "krippendorff_alpha",
+      "Interpretation" = "krippendorff_interpretation"
+    )
+  ) |>
+  DT::formatRound(columns = c("Agreement %", "Krippendorff's α"), digits = 3)
+```
+
+### Most Problematic Codes
+
+```{r problematic-codes-table}
+problematic_codes |>
+  select(code, n_units, percent_agreement, krippendorff_alpha, krippendorff_interpretation) |>
+  DT::datatable(
+    options = list(
+      pageLength = 10,
+      scrollX = TRUE
+    ),
+    colnames = c(
+      "Code" = "code",
+      "Units" = "n_units",
+      "Agreement %" = "percent_agreement",
+      "Krippendorff's α" = "krippendorff_alpha",
+      "Interpretation" = "krippendorff_interpretation"
+    )
+  ) |>
+  DT::formatRound(columns = c("Agreement %", "Krippendorff's α"), digits = 3)
+```
+
+### Set-Based Reliability (Multi-Select Variables)
+
+```{r set-reliability-table}
+set_reliability |>
+  DT::datatable(
+    options = list(
+      pageLength = 10,
+      scrollX = TRUE
+    ),
+    colnames = c(
+      "Variable" = "variable",
+      "Units" = "n_units",
+      "Mean Jaccard Similarity" = "mean_jaccard_similarity",
+      "Median Jaccard Similarity" = "median_jaccard_similarity",
+      "Min Jaccard Similarity" = "min_jaccard_similarity",
+      "Max Jaccard Similarity" = "max_jaccard_similarity"
+    )
+  ) |>
+  DT::formatRound(columns = c("Mean Jaccard Similarity", "Median Jaccard Similarity", 
+                              "Min Jaccard Similarity", "Max Jaccard Similarity"), digits = 3)
+```
+
+## Content Index
+
+```{r content-index}
+# Create a clickable index of all content
+content_index <- tibble(
+  Content = paste0("Content ", 1:length(unique_urls)),
+  URL = unique_urls,
+  Link = paste0("[View](#content-review)")
+)
+
+content_index |>
+  DT::datatable(
+    options = list(
+      pageLength = 20,
+      scrollX = TRUE
+    ),
+    escape = FALSE
+  )
+```
+
+---
+
+*Dashboard generated on `r Sys.time()`*

@@ -1,0 +1,685 @@
+
+Screen reader support enabled.
+AI Classification (onlyAI)
+Section 1 of 13
+CampAIgn Tracker Codierung Only AI
+In this form, only posts that contain AI-generated images/videos are coded with all content categories.
+
+ 
+Coder
+*
+Please select your name 
+Ella
+Lynn
+Doortje
+Daisy
+Test
+Input URL [URL]
+*
+e.g. www.instagram.com/reel/CwkA7uUo9l6/;
+www.facebook.com/photo/?fbid=978572577648510;
+https://www.facebook.com/ads/library/?id=533723579048617
+Input ID [ID]
+*
+e.g. www.instagram.com/reel/CwkA7uUo9l6/;
+www.facebook.com/photo/?fbid=978572577648510;
+https://www.facebook.com/ads/library/?id=533723579048617
+Post availability 
+*
+Here we code whether the post is still available or whether it has been deleted in the meantime (which can be recognized, for example, if the browser shows a “404 error”).
+
+ATTENTION: It is important here to check the original post.
+
+Post available
+Post not available
+After section 1
+Section 2 of 13
+Section title (optional)
+For the encoding of the following categories, only the information at the image and/or video level is used. The texts at the status/text level are only used in exceptional cases if they can serve as contextual information for more precise coding. 
+
+This category refers only to the first AI image and video along with their textual content. In the case of video, the first minute is used for coding (after e.g. still images). Only if the image topic is not clear without context and the category to be coded does not change by adding more information, the caption, geodata, and links and hashtags can help with identification and encoding. Note: if post is a carousel please do click through all posts once and code the first AI image/video (if there is one). 
+
+Text on images should be coded as part of the image. 
+
+
+Image(s)/Video(s) included
+
+*
+Here it is coded whether an image or video is included in the post. “Video(s) included” also refers to embedded YouTube videos or image carousels.
+
+Text only
+One or more images included
+One or more videos included
+Both image(s) and video(s) included
+After section 2
+Section 3 of 13
+AI-Generated Images/Videos
+
+
+Here it is coded whether the displayed images are AI-generated. In a world where machine learning and AI models are becoming increasingly powerful, AI-generated images are gaining significance — also in election campaigns. They may include photos, digital artworks, 3D models, graphics, and much more. To identify AI-generated images, the instructions in the codebook are taken into account.
+
+AI Image/Video
+
+*
+Is the image or video (or parts of it) generated with Artificial Intelligence (AI)?
+
+WE CODE ONLY THE IMAGE/VIDEO CONTENT AND NOT TEXT/TEXT OVERLAYS/TEXT BINDINGS
+
+Yes, the image/video is COMPLETELY AI-generated
+The image/video is PARTLY AI-generated, meaning it contains both AI-generated and real or “photoshopped” content.
+No, the image/video is NOT AI-generated / It is completely real or “photoshopped”
+I am unsure whether the image/video (or parts of it) is AI-generated
+After section 3
+Section 4 of 13
+AI Labeling
+Here we code whether the image/video contains a disclaimer as lettering or overlay that draws attention to the fact that it is AI-generated image content or video sequences. 
+AI Labeling in Image/Video
+
+The image/video contains a disclaimer labeling content/sequences as AI-generated
+The image/video does NOT contain a disclaimer labeling content/sequences as AI-generated
+AI Labeling in Post Text
+
+(When the text of the post provides a reference to AI. Either with a source or when the sender writes: “This is AI,” “We use AI,” “AI was used here,” etc.)
+
+The post text contains a disclaimer labeling image/video content/sequences as AI-generated
+The post text does NOT contain a disclaimer labeling image/video content/sequences as AI-generated
+AI Labeling in Post/Ad
+
+IMPORTANT: Please view the post on your smartphone to code this category because platform disclaimers don´t appear on desktop browsers!
+
+The post/ad contains a disclaimer labeling content/sequences as AI-generated
+The post/ad does NOT contain a disclaimer labeling content/sequences as AI-generated
+After section 4
+Section 5 of 13
+Content of the Image/Video
+For coding the following categories, only the information visible on the image and/or video level is used. Texts at the status/text level are only used in exceptional cases if they serve as necessary context for more accurate coding.
+
+This category refers only to the first image and the first video together with their textual content. For videos, the first minute is used for coding (e.g., still frames). Only if the image theme is unclear without context and the coding category cannot be determined otherwise, captions, geodata, links, and hashtags may help with identification and coding.
+
+
+Text on images should be coded as part of the image.
+
+Theme of the Image/Video
+*
+CODING REFERS ONLY TO IMAGE/VIDEO CONTENTS
+
+Here the central thematic aspects of the image/video are analyzed. For this purpose, images and videos are checked for the presence of different content types: campaign material, poll results, campaign events, individual voter contact, prominent supporters, ordinary supporters, media work, TV debate, political positioning, private background story, everyday politics, negative campaigning, and travel aspects. For each image type, it must be determined whether it is present (1) or not (0). The same image/video can be coded into multiple categories (e.g., when different things are shown in the first minute of a video).
+
+Event announcement/Election call/Candidate presentation
+Political positioning
+Negative imagery/Negative campaigning: The image/video portrays the political opponent in a negative light. This can happen through sharp criticism or with humor.
+Positive imagery/Acclaims: The image/video portrays past and future achievements of the party/government in a positive light. This includes drawing a positive balance, saying “thank you” to campaign helpers, or positively discussing political plans/goals.
+Symbolic image of person(s)/politician(s)/citizen(s) looking directly into the camera (classic campaign poster image).
+Events/Landscape & city scenes: Unlike a symbolic image, people/politicians are doing something, moving, or working (e.g., groups such as politicians, refugees, farmers, protesters, police officers, etc.). Alternatively, a city or (natural) landscape is shown where something is happening (e.g., forest dieback, fire, or flooding, nuclear power plants or wind turbines).
+Image from a campaign event
+Individual voter contact
+Media work (incl. TV debate)
+Private background story
+Everyday politics
+Nostalgic / historical Dutch imagery (references to glorified past or national symbols)
+Humor / Satire (depictions used to mock, exaggerate, or parody)
+Fantasy / futuristic scenarios or depictions of imagined or speculative realities (utopian or dystopian future Netherlands)
+Other imagery
+Nature of the Image/Video
+The image/video contains real-looking content or gives the impression of showing real objects, people, or events (Could the image/video also have been captured with a camera?).
+
+The image/video does NOT contain real-looking content or does not give the impression of showing real objects, people, or events (e.g., graphics, drawings, cartoons, illustrations).
+
+Number of People in the Image/Video
+*
+First, it is coded whether and how many (REAL and UNREAL human) people can be seen in the post. A person’s face should, but does not always have to, be visible. If “something” is clearly a person, it counts as one here. For videos, you should count how many people are visible overall (not necessarily at the same time).
+
+ALSO CODE CLEARLY HUMAN BODY PARTS (hand, legs, back view) AS PERSON.
+
+If a photo of a person (election poster) is photographed again, it should also be coded as a person.
+
+No person shown
+Person(s) shown
+After section 5
+Section 6 of 13
+People in the Image/Video
+Description (optional)
+
+People in the Image/Video
+*
+This category refers only to the first image and the first video together with their textual content. For videos, the first minute is used for coding (e.g., after still frames).
+
+Here it is coded which people appear in the post. For each listed category, it must be determined whether it is present in the post (1) or not (0).
+
+
+Tip: If there is uncertainty in identifying a person, Google can be used for additional research (e.g., reverse image search). Additionally, if there is still uncertainty, the post can be shared within the team so all group members can help with identification.
+
+
+Ordinary people / average citizens / ordinary supporters (e.g., individuals as well as groups of citizens such as teachers, pensioners, students, caregivers, etc.)
+(Members of) minorities, e.g., refugees, LGBTQ+, people with disabilities, Jewish people, women (when women are explicitly labeled, depicted, or referred to as a minority)
+Illegal actors, criminals, offenders, terrorists, extremists / extremist groups. Actors who commit generally criminally relevant actions without being associated with a specific party, business, (non-terrorist) organization, or (non-extremist) social movement (please code them accordingly); actors who plan and carry out criminal activities in a structured group; actors who use violence
+CDA: Henri Bontenbal
+CDA: Hanneke Steen
+Other CDA politicians
+GL-PvdA: Frans Timmermans
+GL-PvdA: Esmah Lahlah
+GL-PvdA: Jesse Klaver
+GL-PvdA: Marjolein Moorman
+GL-PvdA: Mei Li Vos
+GL-PvdA: Femke Halsema
+Other GL-PvdA politicians
+PVV: Geert Wilders
+PVV: Fleur Agema
+PVV: Dirk Beljaarts
+PVV: Barry Madlener
+PVV: Marjolein Faber
+PVV: Reinette Klever
+PVV: Zsolt Szabó
+PVV: Vicky Maeijer
+PVV: Chris Jansen
+PVV: Martin Bosma
+Other PVV politicians
+VVD: Dilan Yeşilgöz
+VVD: Sophie Hermans
+VVD: Eelco Heinen
+VVD: Ruben Brekelmans
+VVD: David van Weel
+VVD: Mariëlle Paul
+VVD: Vincent Karremans
+VVD: Jurgen Nobel
+Other VVD politicians
+D66: Rob Jetten
+D66: Jan Paternotte
+D66: Hans Vijlbrief
+D66: Paul van Meenen
+Other D66 politicians
+BBB: Caroline van der Plas
+BBB: Mona Keijzer
+BBB: Eddie van Marum
+BBB: Jean Rummenie
+BBB: Gijs Tuinman
+BBB: Femke Wiersma
+Other BBB politicians
+SP: Jimmy Dijk
+Other SP politicians
+FVD: Thierry Baudet
+FVD: Gideon van Meijeren
+Other FVD politicians
+CU: Mirjam Bikker
+CU: Pieter Grinwis
+Other CU politicians
+JA21: Joost Eerdmans
+JA21: Annabel Nanninga
+JA21: Ingrid Coenradie
+Other JA21 politicians
+Volt: Laurens Dassen
+Volt: Marieke Koekkoek
+SGP: Chris Stoffer
+Other SGP politicians
+Other Volt politicians
+Denk: Stephan van Baarle
+Denk: Tunahan Kuzu
+Other Denk politicians
+NSC: Eddy van Hijum
+NSC: Nicolien van Vroonhoven
+NSC: Eppo Bruins
+NSC: Tjebbe van Oostenbruggen
+NSC: Teun Struycken
+NSC: Judith Uitermark
+NSC: Caspar Veldkamp
+NSC: Daniëlle Jansen
+Other NSC politicians
+PvdD: Esther Ouwehand
+PvdD: Ines Kostić
+Other PvdD politicians
+Other politicians from Dutch parties / independent politicians
+Foreign politicians (ALL EXCEPT from EU, UN, NATO)
+Foreign politicians from EU, UN, NATO
+Representatives of non-political institutions (e.g., police, churches, military, other public institutions)
+Representatives of interest groups / NGOs (e.g., Greenpeace, Amnesty International, Doctors Without Borders, Reporters Without Borders, trade unions, employers’ associations, lobbyists)
+Representatives of social movements (e.g., Fridays for Future, Identitarian Movement, QAnon, #MeToo movement)
+Entrepreneurs / business leaders (e.g., from VW, Porsche, Daimler, Amazon, Google, Facebook)
+Celebrities and/or opinion leaders (e.g., actors, sports figures/athletes, musicians, economists, social media influencers)
+Journalists, representatives of news media (general, media types, individual media outlets)
+Other persons
+Names of Actors
+*
+If a person depicted is coded as an actor without a name, then please list all depicted persons by name.
+
+(Last name is sufficient; SEPARATE WITH COMMAS)
+
+Mark with an x if all depicted persons were coded only as actors with names.
+
+After section 6
+Section 7 of 13
+Entire Post Content (Text + Image/Video)
+
+From now on, all categories refer to the entire post, including the first image / the first minute of the first video, the caption, geotag, hashtags, and links.
+
+Actors
+*
+Here we code which actors are mentioned in the posts — actors explicitly named in the text and/or visible in an image/video.
+
+
+The creator of the post is not coded as an actor unless he/she is explicitly mentioned in the text and/or visible in an image/video.
+
+Ordinary people / average citizens / ordinary supporters (e.g., individuals as well as groups of citizens, such as teachers, pensioners, students, caregivers, etc.)
+(Members of) minorities, e.g., refugees, LGBTQ+, people with disabilities, Jewish people, women (when women are explicitly labeled, depicted, or referred to as a minority)
+Illegal actors, criminals, offenders, terrorists, extremists / extremist groups. Actors who commit generally criminally relevant actions without being associated with a specific party, business, (non-terrorist) organization, or (non-extremist) social movement (please code accordingly). This also includes actors who plan and carry out criminal activities in a structured group and actors who use violence.
+Dutch government, ministries, parliament, and courts (ALSO KABINET SCHOOF)
+Governments, ministries, parliaments and courts of the provinces
+CDA
+CDA: Henri Bontenbal
+CDA: Hanneke Steen
+Other CDA politicians
+GL-PvdA
+GL-PvdA: Frans Timmermans
+GL-PvdA: Esmah Lahlah
+GL-PvdA: Jesse Klaver
+GL-PvdA: Marjolein Moorman
+GL-PvdA: Mei Li Vos
+GL-PvdA: Femke Halsema
+Other GL-PvdA politicians
+PVV
+PVV: Geert Wilders
+PVV: Fleur Agema
+PVV: Dirk Beljaarts
+PVV: Barry Madlener
+PVV: Marjolein Faber
+PVV: Reinette Klever
+PVV: Zsolt Szabó
+PVV: Vicky Maeijer
+PVV: Chris Jansen
+PVV: Martin Bosma
+Other PVV politicians
+VVD
+VVD: Dilan Yeşilgöz
+VVD: Sophie Hermans
+VVD: Eelco Heinen
+VVD: Ruben Brekelmans
+VVD: David van Weel
+VVD: Mariëlle Paul
+VVD: Vincent Karremans
+VVD: Jurgen Nobel
+Other VVD politicians
+D66
+D66: Rob Jetten
+D66: Jan Paternotte
+D66: Hans Vijlbrief
+D66: Paul van Meenen
+Other D66 politicians
+BBB
+BBB: Caroline van der Plas
+BBB: Mona Keijzer
+BBB: Eddie van Marum
+BBB: Jean Rummenie
+BBB: Gijs Tuinman
+BBB: Femke Wiersma
+Other BBB politicians
+SP
+SP: Jimmy Dijk
+Other SP politicians
+FvD
+FvD: Thierry Baudet
+FvD: Gideon van Meijeren
+Other FVD politicians
+CU
+CU: Mirjam Bikker
+CU: Pieter Grinwis
+Other CU politicians
+JA21
+JA21: Joost Eerdmans
+JA21: Annabel Nanninga
+JA21: Ingrid Coenradie
+Other JA21 politicians
+Volt
+Volt: Laurens Dassen
+Volt: Marieke Koekkoek
+Other Volt politicians
+SGP
+SGP: Chris Stoffer
+Other SGP politicians
+Denk
+Denk: Stephan van Baarle
+Denk: Tunahan Kuzu
+Other Denk politicians
+NSC
+NSC: Eddy van Hijum
+NSC: Nicolien van Vroonhoven
+NSC: Eppo Bruins
+NSC: Tjebbe van Oostenbruggen
+NSC: Teun Struycken
+NSC: Judith Uitermark
+NSC: Caspar Veldkamp
+NSC: Daniëlle Jansen
+Other NSC politicians
+PvdD
+PvdD: Esther Ouwehand
+PvdD: Ines Kostić
+Other PvdD politicians
+Partijkartel
+Gevestigde partijen
+Other parties from the Netherlands
+Other politicians from Dutch parties
+Foreign politicians or parties and/or foreign governments, foreign parliaments
+Europe/EU/NATO, EU/NATO institutions and bodies & their representatives (e.g., Members of the European Parliament, EU/NATO officials, European parties & party families such as EPP, S&D, ID)
+(Representatives of) non-political institutions (e.g., police, churches, military, public institutions)
+(Representatives of) interest groups, NGOs (e.g., Greenpeace, Amnesty International, Doctors Without Borders, Reporters Without Borders, trade unions, employers’ associations, lobbyists)
+(Representatives of) social movements (e.g., Fridays for Future, Identitarian Movement, QAnon, #MeToo movement)
+Companies / business leaders (e.g., VW, Porsche, Daimler, Amazon, Google, Facebook)
+Celebrities and/or opinion leaders (e.g., actors, sports figures/athletes, musicians, economists, social media influencers)
+News media and their journalists / representatives (in general, by media type, or individual outlets)
+Other actors
+Topics
+*
+
+Below, the thematic field should be determined — what is the main focus of the post? The central theme can be a specific issue (e.g., a political or societal debate) and/or an event (e.g., an election, a vote, a parliamentary or judicial decision, a terrorist act). A person can also be the theme of the post.
+
+Election in general (electoral system, campaign events, campaign dates, campaign appearances, election polls)
+Political parties and politicians (candidate presentation; politicians as the main subject)
+Call to vote / get-out-the-vote call (WITHOUT AND WITH NAMING OF PARTY(S)
+Economy and finance
+Labor and social issues
+Domestic and migration policy (public safety, crime (incl. femicide), political radicalism, religious fanaticism, terrorism)
+Environmental and energy policy
+Foreign, security, and defense policy
+Housing (Crisis)
+Digital and Infrastructure
+Europe
+Education and culture
+Constitution of the Political System (e.g. independence of the judiciary, rule of law, parliamentary representation of the will of the people)
+Civil rights (including gender politics, LGBTQ+ policies)
+Other political topic
+After section 7
+Section 8 of 13
+Communication Style: Negative Campaigning & Acclaims
+
+All categories under Negative Campaigning & Acclaims refer to the entire post, including the first image, the first minute of the first video, captions, geotags, hashtags, and links. All categories that are present in a post are coded with “1”; all categories that are not present are coded with “0.”
+
+Negative Tendency/Tonality
+*
+A post may contain negative texts/images/videos or emotions about a problem, a topic, or a political actor. Negative tendency/tonality is determined by the overall impression of the statements, images, and emotions in the post. Coding is based on the tone/value of the statements, images, and emotions as perceived by an average reader when viewing the post.
+
+For each post, code whether it contains negative statements (1) or not (0).
+
+
+Important: If both negative and positive statements are present, code negative statements as present (“1”).
+
+Negative tendency/tonality present
+Negative tendency/tonality NOT present
+After section 8
+Section 9 of 13
+Type of Attack
+Description (optional)
+
+Type of Attack
+*
+Here it is coded which specific aspect the attack is aimed at. Five types of attacks are distinguished, shown in the table below. Each of the categories is coded “1” if this type of attack appears in the post; otherwise “0.” If more than one attack type is present in a post, all applicable categories are coded “1.”
+
+Attack on political issues/achievements/ideologies (e.g., past or future achievements)
+Attack on a person/party/organization/institution (professional or personal competence, trustworthiness, credibility, moral stance and/or integrity, rhetorical skills, or appearance)
+Other form of attack/negative tonality
+After section 9
+Section 10 of 13
+Target of Attack
+Description (optional)
+
+Target of Attack
+Here it is coded whether individual politicians or more abstract institutions are the target of the above coded negative campaigning. Each of the following actors is coded with “1” if negative statements and emotions are directed at them; if not, code “0.”
+
+
+For each target, select only one category. Which category is chosen depends on the wording in the text.
+
+No actor attacked
+Ordinary people / average citizens / ordinary supporters (e.g., individuals as well as groups of citizens, such as teachers, pensioners, students, caregivers, etc.)
+(Members of) minorities, e.g., refugees, LGBTQ+, people with disabilities, Jewish people, women (when women are explicitly labeled, depicted, or referred to as a minority)
+Illegal actors, criminals, offenders, terrorists, extremists / extremist groups. Actors who commit generally criminally relevant actions without being associated with a specific party, business, (non-terrorist) organization, or (non-extremist) social movement (please code accordingly). This also includes actors who plan and carry out criminal activities in a structured group and actors who use violence.
+Dutch government, ministries, parliament, and courts (ALSO KABINET SCHOOF)
+Governments, ministries, parliaments and courts of the provinces
+CDA
+CDA: Henri Bontenbal
+CDA: Hanneke Steen
+Other CDA politicians
+GL-PvdA
+GL-PvdA: Frans Timmermans
+GL-PvdA: Esmah Lahlah
+GL-PvdA: Jesse Klaver
+GL-PvdA: Marjolein Moorman
+GL-PvdA: Mei Li Vos
+GL-PvdA: Femke Halsema
+Other GL-PvdA politicians
+PVV
+PVV: Geert Wilders
+PVV: Fleur Agema
+PVV: Dirk Beljaarts
+PVV: Barry Madlener
+PVV: Marjolein Faber
+PVV: Reinette Klever
+PVV: Zsolt Szabó
+PVV: Vicky Maeijer
+PVV: Chris Jansen
+PVV: Martin Bosma
+Other PVV politicians
+VVD
+VVD: Dilan Yeşilgöz
+VVD: Sophie Hermans
+VVD: Eelco Heinen
+VVD: Ruben Brekelmans
+VVD: David van Weel
+VVD: Mariëlle Paul
+VVD: Vincent Karremans
+VVD: Jurgen Nobel
+Other VVD politicians
+D66
+D66: Rob Jetten
+D66: Jan Paternotte
+D66: Hans Vijlbrief
+D66: Paul van Meenen
+Other D66 politicians
+BBB
+BBB: Caroline van der Plas
+BBB: Mona Keijzer
+BBB: Eddie van Marum
+BBB: Jean Rummenie
+BBB: Gijs Tuinman
+BBB: Femke Wiersma
+Other BBB politicians
+SP
+SP: Jimmy Dijk
+Other SP politicians
+FvD
+FvD: Thierry Baudet
+FvD: Gideon van Meijeren
+Other FVD politicians
+CU
+CU: Mirjam Bikker
+CU: Pieter Grinwis
+Other CU politicians
+JA21
+JA21: Joost Eerdmans
+JA21: Annabel Nanninga
+JA21: Ingrid Coenradie
+Other JA21 politicians
+Volt
+Volt: Laurens Dassen
+Volt: Marieke Koekkoek
+Other Volt politicians
+SGP
+SGP: Chris Stoffer
+Other SGP politicians
+Denk
+Denk: Stephan van Baarle
+Denk: Tunahan Kuzu
+Other Denk politicians
+NSC
+NSC: Eddy van Hijum
+NSC: Nicolien van Vroonhoven
+NSC: Eppo Bruins
+NSC: Tjebbe van Oostenbruggen
+NSC: Teun Struycken
+NSC: Judith Uitermark
+NSC: Caspar Veldkamp
+NSC: Daniëlle Jansen
+Other NSC politicians
+PvdD
+PvdD: Esther Ouwehand
+PvdD: Ines Kostić
+Other PvdD politicians
+Partijkartel
+Gevestigde partijen
+Other parties from the Netherlands
+Other politicians from Dutch parties
+Foreign politicians or parties and/or foreign governments, foreign parliaments
+Europe/EU/NATO, EU/NATO institutions and bodies & their representatives (e.g., Members of the European Parliament, EU/NATO officials, European parties & party families such as EPP, S&D, ID)
+(Representatives of) non-political institutions (e.g., police, churches, military, public institutions)
+(Representatives of) interest groups, NGOs (e.g., Greenpeace, Amnesty International, Doctors Without Borders, Reporters Without Borders, trade unions, employers’ associations, lobbyists)
+(Representatives of) social movements (e.g., Fridays for Future, Identitarian Movement, QAnon, #MeToo movement)
+Companies / business leaders (e.g., VW, Porsche, Daimler, Amazon, Google, Facebook)
+Celebrities and/or opinion leaders (e.g., actors, sports figures/athletes, musicians, economists, social media influencers)
+News media and their journalists / representatives (in general, by media type, or individual outlets)
+Other actors
+After section 10
+Section 11 of 13
+Acclaim (“Recognition/Applaud”)
+Another strategy besides “negative campaigning” is to present one’s own topics and politicians, as well as the previous work of politicians from one’s own party, in a positive light. This strategy can, but does not have to, be used to contrast positive achievements of one’s own party or candidate with the negative achievements of political opponents.
+
+
+“Acclaim” is used to “applaud” one’s own party or candidate. This strategy shows voters why it is worthwhile to vote for one’s own party.
+
+Positive Tendency/Tonality
+*
+
+A post may contain approval expressed through images or emotions about a problem, a topic, or a political actor. This tendency is derived from the overall impression of the statements, images, and emotions contained in the post. Coding is based on the tone/value of the statements, images, and emotions as perceived by an average reader when viewing the post.
+
+Positive tendency/tonality present
+Positive tendency/tonality NOT present
+After section 11
+Section 12 of 13
+Type of Acclaim
+Description (optional)
+
+Here it is coded which specific aspect the recognition/acclaim is directed at. Five types of acclaim are distinguished. Each of the following categories is coded with “1” if this type of acclaim is present in the post; otherwise “0.”
+
+*
+Type of Acclaim
+Acclaim/Praise/Recognition of political issues/achievements/ideologies (e.g., past or future achievements)
+Acclaim/Praise/Recognition of a person/party/organization/institution (professional or personal competence, trustworthiness, credibility, moral stance and/or integrity, rhetorical skills, or appearance)
+Other form of recognition/praise
+After section 12
+Section 13 of 13
+Acclaimziel
+Description (optional)
+
+Target of Acclaim
+*
+Here it is coded whether individual politicians or institutions are the target of the above coded praise. Each of the following actors is coded with “1” if positive statements and emotions are directed at them; if not, code “0.”
+
+
+For each target, select only one category. Which category is chosen depends on the wording in the text.
+
+No actor praised
+Ordinary people / average citizens / ordinary supporters (e.g., individuals as well as groups of citizens, such as teachers, pensioners, students, caregivers, etc.)
+(Members of) minorities, e.g., refugees, LGBTQ+, people with disabilities, Jewish people, women (when women are explicitly labeled, depicted, or referred to as a minority)
+Illegal actors, criminals, offenders, terrorists, extremists / extremist groups. Actors who commit generally criminally relevant actions without being associated with a specific party, business, (non-terrorist) organization, or (non-extremist) social movement (please code accordingly). This also includes actors who plan and carry out criminal activities in a structured group and actors who use violence.
+Dutch government, ministries, parliament, and courts (ALSO KABINET SCHOOF)
+Governments, ministries, parliaments and courts of the provinces
+CDA
+CDA: Henri Bontenbal
+CDA: Hanneke Steen
+Other CDA politicians
+GL-PvdA
+GL-PvdA: Frans Timmermans
+GL-PvdA: Esmah Lahlah
+GL-PvdA: Jesse Klaver
+GL-PvdA: Marjolein Moorman
+GL-PvdA: Mei Li Vos
+GL-PvdA: Femke Halsema
+Other GL-PvdA politicians
+PVV
+PVV: Geert Wilders
+PVV: Fleur Agema
+PVV: Dirk Beljaarts
+PVV: Barry Madlener
+PVV: Marjolein Faber
+PVV: Reinette Klever
+PVV: Zsolt Szabó
+PVV: Vicky Maeijer
+PVV: Chris Jansen
+PVV: Martin Bosma
+Other PVV politicians
+VVD
+VVD: Dilan Yeşilgöz
+VVD: Sophie Hermans
+VVD: Eelco Heinen
+VVD: Ruben Brekelmans
+VVD: David van Weel
+VVD: Mariëlle Paul
+VVD: Vincent Karremans
+VVD: Jurgen Nobel
+Other VVD politicians
+D66
+D66: Rob Jetten
+D66: Jan Paternotte
+D66: Hans Vijlbrief
+D66: Paul van Meenen
+Other D66 politicians
+BBB
+BBB: Caroline van der Plas
+BBB: Mona Keijzer
+BBB: Eddie van Marum
+BBB: Jean Rummenie
+BBB: Gijs Tuinman
+BBB: Femke Wiersma
+Other BBB politicians
+SP
+SP: Jimmy Dijk
+Other SP politicians
+FvD
+FvD: Thierry Baudet
+FvD: Gideon van Meijeren
+Other FVD politicians
+CU
+CU: Mirjam Bikker
+CU: Pieter Grinwis
+Other CU politicians
+JA21
+JA21: Joost Eerdmans
+JA21: Annabel Nanninga
+JA21: Ingrid Coenradie
+Other JA21 politicians
+Volt
+Volt: Laurens Dassen
+Volt: Marieke Koekkoek
+Other Volt politicians
+SGP
+SGP: Chris Stoffer
+Other SGP politicians
+Denk
+Denk: Stephan van Baarle
+Denk: Tunahan Kuzu
+Other Denk politicians
+NSC
+NSC: Eddy van Hijum
+NSC: Nicolien van Vroonhoven
+NSC: Eppo Bruins
+NSC: Tjebbe van Oostenbruggen
+NSC: Teun Struycken
+NSC: Judith Uitermark
+NSC: Caspar Veldkamp
+NSC: Daniëlle Jansen
+Other NSC politicians
+PvdD
+PvdD: Esther Ouwehand
+PvdD: Ines Kostić
+Other PvdD politicians
+Partijkartel
+Gevestigde partijen
+Other parties from the Netherlands
+Other politicians from Dutch parties
+Foreign politicians or parties and/or foreign governments, foreign parliaments
+Europe/EU/NATO, EU/NATO institutions and bodies & their representatives (e.g., Members of the European Parliament, EU/NATO officials, European parties & party families such as EPP, S&D, ID)
+(Representatives of) non-political institutions (e.g., police, churches, military, public institutions)
+(Representatives of) interest groups, NGOs (e.g., Greenpeace, Amnesty International, Doctors Without Borders, Reporters Without Borders, trade unions, employers’ associations, lobbyists)
+(Representatives of) social movements (e.g., Fridays for Future, Identitarian Movement, QAnon, #MeToo movement)
+Companies / business leaders (e.g., VW, Porsche, Daimler, Amazon, Google, Facebook)
+Celebrities and/or opinion leaders (e.g., actors, sports figures/athletes, musicians, economists, social media influencers)
+News media and their journalists / representatives (in general, by media type, or individual outlets)
+Other actors
+
+.
+Banner hidden 

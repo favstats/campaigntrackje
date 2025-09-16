@@ -1,0 +1,546 @@
+---
+title: "Intercoder Reliability Dashboard"
+author: "Campaign Track Analysis"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
+    code_folding: show
+    css: dashboard_styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+# Load required packages
+library(tidyverse)
+library(DT)
+library(knitr)
+library(htmltools)
+library(plotly)
+
+# Source the reliability analysis
+source("irr.R", local = TRUE)
+
+# Source the screenshot utilities
+source("screenshot_utils.R", local = TRUE)
+
+# Note: We're using webshot2 with bot user agent for screenshots. This approach successfully
+# bypasses Facebook cookie dialogs and captures the actual content instead of the dialog.
+
+# Debug output for training
+cat("=== DEBUGGING DATA STRUCTURE ===\n")
+cat("Total rows in dataset:", nrow(dat), "\n")
+cat("Unique coders:", paste(unique(dat$coder), collapse = ", "), "\n")
+cat("Number of unique URLs:", length(unique(dat$url)), "\n")
+cat("Sample URLs:\n")
+print(head(unique(dat$url), 3))
+cat("================================\n\n")
+
+# Simple image display function with screenshots
+generate_image_html_with_screenshot <- function(url) {
+  # Create filename from URL
+  filename <- gsub("[^a-zA-Z0-9]", "_", url)
+  filename <- paste0(filename, ".png")
+  
+  # Take screenshot using the utility function
+  screenshot_path <- take_screenshot(url, filename)
+  
+  # Check if screenshot exists and has content
+  if (file.exists(screenshot_path) && file.size(screenshot_path) > 5000) {
+    # Generate HTML with screenshot
+    paste0(
+      '<div class="screenshot-container">',
+      '<h5>Post Screenshot</h5>',
+      '<img src="', screenshot_path, '" alt="Screenshot of post" style="max-width: 100%; height: auto;" />',
+      '<p><a href="', url, '" target="_blank">View Original Post</a></p>',
+      '</div>'
+    )
+  } else {
+    # Fallback if screenshot failed
+    paste0(
+      '<div class="screenshot-container">',
+      '<h5>Screenshot Unavailable</h5>',
+      '<p>Screenshot could not be generated for this URL.</p>',
+      '<p><a href="', url, '" target="_blank">View Original Post</a></p>',
+      '</div>'
+    )
+  }
+}
+
+# Create a function to check if URL is an image
+is_image_url <- function(url) {
+  if (is.na(url)) return(FALSE)
+  image_extensions <- c("\\.jpg", "\\.jpeg", "\\.png", "\\.gif", "\\.bmp", "\\.webp")
+  any(sapply(image_extensions, function(ext) grepl(ext, tolower(url), perl = TRUE)))
+}
+
+# Create a function to generate image HTML
+generate_image_html <- function(url) {
+  if (is.na(url) || url == "") {
+    return('<div class="image-container"><p style="color: #666;">No image URL available</p></div>')
+  }
+  
+  if (is_image_url(url)) {
+    return(paste0('<div class="image-container"><img src="', url, '" alt="Coded Image" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'block\';"><p style="display:none; color: #666;">Image could not be loaded: <a href="', url, '" target="_blank">', url, '</a></p></div>'))
+  } else {
+    return(paste0('<div class="image-container"><p>External content: <a href="', url, '" target="_blank">', url, '</a></p></div>'))
+  }
+}
+
+# Prepare data for dashboard
+# Check column names first
+cat("Columns in bin_df:", names(bin_df), "\n")
+cat("Columns in single_label_df:", names(single_label_df), "\n")
+cat("Columns in disagree_long:", names(disagree_long), "\n")
+
+# Prepare data for dashboard
+dashboard_data_binary <- bin_df |>
+  select(url, coder, everything()) |>
+  arrange(url, coder)
+
+dashboard_data_single <- single_label_df |>
+  select(url, coder, everything()) |>
+  arrange(url, coder)
+
+# Get unique URLs for navigation
+unique_urls <- unique(bin_df$url)
+url_index <- setNames(seq_along(unique_urls), unique_urls)
+
+# Get coders
+coders <- unique(bin_df$coder)
+
+# Create summary of biggest disagreements
+biggest_disagreements <- disagree_long |>
+  filter(n_disagree > 0) |>
+  group_by(code) |>
+  summarise(
+    total_disagreements = sum(n_disagree, na.rm = TRUE),
+    n_units_with_disagreement = n(),
+    avg_disagreements_per_unit = mean(n_disagree, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  arrange(desc(total_disagreements)) |>
+  head(10)
+
+# Get reliability summary
+reliability_summary <- reliability_stats |>
+  filter(n_units > 0) |>
+  arrange(percent_agreement) |>
+  head(10)
+```
+
+```{r}
+reliability_stats %>% 
+  dplyr::filter(str_detect(code, "People|Actor|Target", negate = T)) %>% 
+  arrange(desc(percent_agreement)) %>% 
+  ggplot(aes(percent_agreement)) +
+  geom_histogram()
+```
+
+
+```{r}
+reliability_stats %>% 
+  dplyr::filter(str_detect(code, "People|Actor|Target", negate = T)) %>% summarize(avg_agreement = mean(percent_agreement))
+```
+
+
+<div class="section-header">
+  <h2>Problematic Codes</h2>
+</div>
+
+```{r problematic-codes-training, results='asis'}
+# Get most problematic codes for training
+problematic_codes <- reliability_stats |>
+  filter(n_units > 0) |>
+  arrange(percent_agreement, krippendorff_alpha) |>
+  head(20)
+
+cat("### Codes Needing Immediate Attention (Lowest Reliability)\n\n")
+cat("**Focus on these codes during training - they show the most disagreement between coders:**\n\n")
+
+for (i in 1:nrow(problematic_codes)) {
+  row <- problematic_codes[i, ]
+  interpretation <- row$krippendorff_interpretation
+  
+  # Color code based on severity
+  if (row$percent_agreement < 0.3) {
+    severity_text <- "CRITICAL"
+  } else if (row$percent_agreement < 0.5) {
+    severity_text <- "HIGH PRIORITY"
+  } else {
+    severity_text <- "MEDIUM PRIORITY"
+  }
+  
+  cat(sprintf('<div class="problematic-code">'))
+  cat(sprintf('<strong>%d. %s</strong> <span style="color: #d32f2f; font-weight: bold;">%s</span><br/>', i, row$code, severity_text))
+  cat(sprintf('Agreement: %.1f%% | Krippendorff α: %s | Interpretation: %s | Units: %d', 
+              row$percent_agreement * 100, 
+              ifelse(is.na(row$krippendorff_alpha), "N/A", sprintf("%.3f", row$krippendorff_alpha)),
+              interpretation,
+              row$n_units))
+  cat('</div>\n\n')
+}
+
+# Also show excellent codes for comparison
+excellent_codes <- reliability_stats |>
+  filter(n_units > 0, krippendorff_interpretation == "Excellent") |>
+  arrange(desc(krippendorff_alpha)) |>
+  head(5)
+
+
+```
+
+## Content Review {#content-tabs}
+
+```{r content-tabs, results='asis'}
+# Create content review for each URL using R Markdown tabset
+cat("\n### Content 1 {.tabset}\n\n")
+
+for (i in 1:length(unique_urls)) {
+  current_url <- unique_urls[i]
+  
+  cat(sprintf("\n#### Content %d\n\n", i))
+  
+  # URL display (only once, not duplicated)
+  cat(sprintf("**URL:** %s\n\n", current_url))
+  
+  # Generate screenshot
+  cat(generate_image_html_with_screenshot(current_url))
+  
+  # Get data for this URL
+  url_data_binary <- bin_df |> filter(url == current_url)
+  url_data_single <- single_label_df |> filter(url == current_url)
+  
+  # Get disagreement data for this URL
+  url_disagreements <- disagree_long |> filter(url == current_url)
+  
+  # Create coder comparison table
+  cat("##### Coder Results\n\n")
+  
+  # Define proper variable order based on categories.txt
+  variable_order <- c(
+    # Single-label variables (in order from categories.txt)
+    "Post availability",
+    "Image(s)/Video(s) included",
+    "AI Image/Video",
+    "AI Image/Video (AI or not)",
+    "AI Labeling in Image/Video",
+    "AI Labeling in Post Text",
+    "AI Labeling in Post/Ad",
+    "Nature of the Image/Video",
+    "Number of People in the Image/Video",
+    "Negative Tendency/Tonality",
+    "Positive Tendency/Tonality",
+    # Multi-select variables
+    "People in the Image/Video",
+    "Actors",
+    "Target of Attack",
+    "Target of Acclaim", 
+    "Theme of the Image/Video",
+    "Names of Actors",
+    "Type of Attack",
+    "Type of Acclaim",
+    # Topics variables (individual)
+    "Topics__election_in_general_electoral_system_campaign_events_campaign_dates_campaign_appearances_election_polls_bin",
+    "Topics__political_parties_and_politicians_candidate_presentation_politicians_as_the_main_subject_bin",
+    "Topics__call_to_vote_get_out_the_vote_call_without_and_with_naming_of_party_s_bin",
+    "Topics__economy_and_finance_bin",
+    "Topics__labor_and_social_issues_bin",
+    "Topics__domestic_and_migration_policy_public_safety_crime_incl_femicide_political_radicalism_religious_fanaticism_terrorism_bin",
+    "Topics__environmental_and_energy_policy_bin",
+    "Topics__foreign_security_and_defense_policy_bin",
+    "Topics__housing_crisis_bin",
+    "Topics__digital_and_infrastructure_bin",
+    "Topics__europe_bin",
+    "Topics__education_and_culture_bin",
+    "Topics__constitution_of_the_political_system_e_g_independence_of_the_judiciary_rule_of_law_parliamentary_representation_of_the_will_of_the_people_bin",
+    "Topics__civil_rights_including_gender_politics_lgbtq_policies_bin",
+    "Topics__other_political_topic_bin"
+  )
+  
+  # Get binary columns and reorder them
+  binary_cols <- setdiff(names(bin_df), c("coder", "url"))
+  single_cols <- setdiff(names(single_label_df), c("coder", "url"))
+  
+  # Reorder columns to match the defined order
+  binary_cols_ordered <- c()
+  single_cols_ordered <- c()
+  
+  # Add variables in the defined order
+  for(var in variable_order) {
+    if(var %in% binary_cols) {
+      binary_cols_ordered <- c(binary_cols_ordered, var)
+    } else if(var %in% single_cols) {
+      single_cols_ordered <- c(single_cols_ordered, var)
+    }
+  }
+  
+  # Add any remaining variables not in the defined order
+  binary_cols_ordered <- c(binary_cols_ordered, setdiff(binary_cols, binary_cols_ordered))
+  single_cols_ordered <- c(single_cols_ordered, setdiff(single_cols, single_cols_ordered))
+  
+  # Create comparison table for binary variables
+  if (nrow(url_data_binary) > 0) {
+    comparison_data_binary <- url_data_binary |>
+      select(coder, all_of(binary_cols_ordered)) |>
+      pivot_longer(cols = -coder, names_to = "code", values_to = "value") |>
+      pivot_wider(names_from = coder, values_from = value)
+  } else {
+    comparison_data_binary <- tibble()
+  }
+  
+  # Create comparison table for single-label variables
+  if (nrow(url_data_single) > 0) {
+    comparison_data_single <- url_data_single |>
+      select(coder, all_of(single_cols_ordered)) |>
+      pivot_longer(cols = -coder, names_to = "code", values_to = "value") |>
+      pivot_wider(names_from = coder, values_from = value)
+  } else {
+    comparison_data_single <- tibble()
+  }
+  
+  # Handle binary variables separately
+  if (nrow(comparison_data_binary) > 0) {
+    # Calculate disagreement status for binary variables
+    numeric_cols <- select(comparison_data_binary, where(is.numeric))
+    comparison_data_binary <- comparison_data_binary |>
+      mutate(
+        has_disagreement = rowSums(numeric_cols, na.rm = TRUE) > 0 & 
+                          rowSums(numeric_cols, na.rm = TRUE) < ncol(numeric_cols),
+        agreement_class = ifelse(has_disagreement, "disagreement", "agreement")
+      )
+    
+    disagreement_codes_binary <- comparison_data_binary |> filter(has_disagreement) |> pull(code)
+    agreement_codes_binary <- comparison_data_binary |> filter(!has_disagreement) |> pull(code)
+  } else {
+    disagreement_codes_binary <- character(0)
+    agreement_codes_binary <- character(0)
+  }
+  
+  # Handle single-label variables separately
+  if (nrow(comparison_data_single) > 0) {
+    # Calculate disagreement status for single-label variables (compare character values)
+    comparison_data_single <- comparison_data_single |>
+      rowwise() |>
+      mutate(
+        values = list(trimws(c_across(where(is.character) & !code))),
+        unique_values = length(unique(na.omit(values))),
+        has_disagreement = unique_values > 1,
+        agreement_class = ifelse(has_disagreement, "disagreement", "agreement")
+      ) |>
+      ungroup()
+    
+    disagreement_codes_single <- comparison_data_single |> filter(has_disagreement) |> pull(code)
+    agreement_codes_single <- comparison_data_single |> filter(!has_disagreement) |> pull(code)
+  } else {
+    disagreement_codes_single <- character(0)
+    agreement_codes_single <- character(0)
+  }
+  
+  # Combine lists and reorder to match the defined order
+  all_disagreement_codes <- c(disagreement_codes_binary, disagreement_codes_single)
+  all_agreement_codes <- c(agreement_codes_binary, agreement_codes_single)
+  
+  # Reorder both lists to match the variable_order
+  disagreement_codes <- c()
+  agreement_codes <- c()
+  
+  # Add codes in the defined order
+  for(var in variable_order) {
+    if(var %in% all_disagreement_codes) {
+      disagreement_codes <- c(disagreement_codes, var)
+    }
+    if(var %in% all_agreement_codes) {
+      agreement_codes <- c(agreement_codes, var)
+    }
+  }
+  
+  # Add any remaining codes not in the defined order
+  disagreement_codes <- c(disagreement_codes, setdiff(all_disagreement_codes, disagreement_codes))
+  agreement_codes <- c(agreement_codes, setdiff(all_agreement_codes, agreement_codes))
+  
+  if (length(disagreement_codes) > 0) {
+    cat("###### Codes with Disagreements\n\n")
+    
+    for (code in disagreement_codes) {
+      # Check if it's a binary or single-label variable
+      if (code %in% disagreement_codes_binary) {
+        code_data <- comparison_data_binary |> filter(code == !!code)
+        
+        cat(sprintf("**%s**\n", code))
+        cat('<div class="code-comparison disagreement">\n')
+        
+        for (coder in coders) {
+          if (coder %in% names(code_data)) {
+            value <- code_data[[coder]]
+            if (!is.na(value) && value == 1) {
+              cat(sprintf("- **%s**: ✓ (1)\n", coder))
+            } else if (!is.na(value) && value == 0) {
+              cat(sprintf("- **%s**: ✗ (0)\n", coder))
+            } else {
+              cat(sprintf("- **%s**: N/A\n", coder))
+            }
+          }
+        }
+        
+        cat('</div>\n\n')
+        
+      } else if (code %in% disagreement_codes_single) {
+        code_data <- comparison_data_single |> filter(code == !!code)
+        
+        cat(sprintf("**%s**\n", code))
+        cat('<div class="code-comparison disagreement">\n')
+        
+        for (coder in coders) {
+          if (coder %in% names(code_data)) {
+            value <- code_data[[coder]]
+            if (!is.na(value)) {
+              cat(sprintf("- **%s**: %s\n", coder, value))
+            } else {
+              cat(sprintf("- **%s**: N/A\n", coder))
+            }
+          }
+        }
+        
+        cat('</div>\n\n')
+      }
+    }
+  }
+  
+  if (length(agreement_codes) > 0) {
+    cat("###### Codes with Agreement\n\n")
+    
+    # Group agreement codes by their values
+    # Handle binary agreement codes
+    if (length(agreement_codes_binary) > 0) {
+      agreement_data_binary <- comparison_data_binary |> 
+        filter(!has_disagreement)
+    } else {
+      agreement_data_binary <- tibble()
+    }
+    
+    # Handle single-label agreement codes  
+    if (length(agreement_codes_single) > 0) {
+      agreement_data_single <- comparison_data_single |> 
+        filter(!has_disagreement)
+    } else {
+      agreement_data_single <- tibble()
+    }
+    
+    # Display binary agreement codes
+    if (nrow(agreement_data_binary) > 0) {
+      cat('<div class="code-comparison agreement">\n')
+      for (code in agreement_codes_binary) {
+        cat(sprintf("- **%s**: ✓ (All coders agreed: 0 = not present)\n", code))
+      }
+      cat('</div>\n\n')
+    }
+    
+    # Display single-label agreement codes
+    if (nrow(agreement_data_single) > 0) {
+      cat('<div class="code-comparison agreement">\n')
+      for (code in agreement_codes_single) {
+        # Get the agreed value
+        code_data <- agreement_data_single |> filter(code == !!code)
+        if (nrow(code_data) > 0) {
+          agreed_value <- code_data[[2]] # First coder's value
+          cat(sprintf("- **%s**: ✓ (All coders agreed: %s)\n", code, agreed_value))
+        }
+      }
+      cat('</div>\n\n')
+    }
+  }
+  
+}
+```
+
+## Data Tables
+
+### Complete Reliability Statistics
+
+```{r reliability-table}
+reliability_stats |>
+  select(code, n_units, percent_agreement, krippendorff_alpha, krippendorff_interpretation) |>
+  arrange(percent_agreement) |>
+  DT::datatable(
+    options = list(
+      pageLength = 20,
+      scrollX = TRUE,
+      columnDefs = list(
+        list(className = 'dt-center', targets = c(1, 2, 3, 4))
+      )
+    ),
+    colnames = c(
+      "Code" = "code",
+      "Units" = "n_units", 
+      "Agreement %" = "percent_agreement",
+      "Krippendorff's α" = "krippendorff_alpha",
+      "Interpretation" = "krippendorff_interpretation"
+    )
+  ) |>
+  DT::formatRound(columns = c("Agreement %", "Krippendorff's α"), digits = 3)
+```
+
+### Most Problematic Codes
+
+```{r problematic-codes-table}
+problematic_codes |>
+  select(code, n_units, percent_agreement, krippendorff_alpha, krippendorff_interpretation) |>
+  DT::datatable(
+    options = list(
+      pageLength = 10,
+      scrollX = TRUE
+    ),
+    colnames = c(
+      "Code" = "code",
+      "Units" = "n_units",
+      "Agreement %" = "percent_agreement", 
+      "Krippendorff's α" = "krippendorff_alpha",
+      "Interpretation" = "krippendorff_interpretation"
+    )
+  ) |>
+  DT::formatRound(columns = c("Agreement %", "Krippendorff's α"), digits = 3)
+```
+
+---
+
+## Content Index
+
+```{r content-index}
+# Create a quick content index
+content_index <- tibble(
+  Content = paste0("Content ", 1:length(unique_urls)),
+  URL = unique_urls,
+  `URL Preview` = ifelse(nchar(unique_urls) > 60, 
+                        paste0(substr(unique_urls, 1, 57), "..."), 
+                        unique_urls)
+)
+
+content_index |>
+  DT::datatable(
+    options = list(
+      pageLength = 10,
+      scrollX = TRUE,
+      dom = 'tip'
+    ),
+    colnames = c("Content" = "Content", "Full URL" = "URL", "URL Preview" = "URL Preview"),
+    callback = DT::JS("
+      table.on('click', 'tr', function() {
+        var data = table.row(this).data();
+        var contentNum = data[0].replace('Content ', '');
+        var tabId = 'content-' + contentNum;
+        var tabButton = document.getElementById('tab-' + contentNum);
+        if (tabButton) {
+          tabButton.click();
+        }
+      });
+    ")
+  )
+```
+
+---
+
+*Dashboard generated on `r Sys.time()`*
