@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Viewer - Campaign Tracker</title>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .gallery-post {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .gallery-post::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c);
+            z-index: 10;
+        }
+
+        .gallery-post-media-container {
+            width: 100%;
+            min-height: 400px;
+            max-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-post-image,
+        .gallery-post-video {
+            max-width: 100%;
+            max-height: 600px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            color: #D32F2F;
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .gallery-post-content {
+            padding: 40px;
+            background: #fff;
+        }
+
+        .gallery-post-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 36px;
+            padding-bottom: 32px;
+            border-bottom: 2px solid #f8fafc;
+            flex-wrap: wrap;
+        }
+
+        .gallery-post-platform-icon {
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-post-account {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .gallery-post-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.02em;
+        }
+
+        .gallery-post-date {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .gallery-post-platform {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            white-space: nowrap;
+        }
+
+        .gallery-post-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #2d3748;
+            margin: 0 0 32px 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .metadata-section {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 32px;
+        }
+
+        .metadata-row {
+            display: flex;
+            padding: 8px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .metadata-row:last-child {
+            border-bottom: none;
+        }
+
+        .metadata-label {
+            font-weight: 600;
+            color: #475569;
+            width: 120px;
+            flex-shrink: 0;
+        }
+
+        .metadata-value {
+            color: #1e293b;
+            word-break: break-all;
+        }
+
+        .gallery-buttons-row {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .gallery-view-original,
+        .gallery-view-form {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 16px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .gallery-view-form {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+        }
+
+        .gallery-view-original:hover,
+        .gallery-view-form:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        .no-data-message {
+            text-align: center;
+            padding: 60px 20px;
+            color: #64748b;
+        }
+
+        .no-data-message h2 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .no-data-message p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .home-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #1e293b;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .home-link:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            color: #1e293b;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .gallery-post-content {
+                padding: 24px;
+            }
+
+            .gallery-post-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .gallery-post-name {
+                font-size: 1.1rem;
+            }
+
+            .gallery-post-text {
+                font-size: 1rem;
+            }
+
+            .metadata-label {
+                width: 100px;
+                font-size: 0.9rem;
+            }
+
+            .metadata-value {
+                font-size: 0.9rem;
+            }
+
+            .gallery-buttons-row {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .gallery-view-original,
+            .gallery-view-form {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .home-link {
+                position: static;
+                margin-bottom: 20px;
+                display: inline-flex;
+            }
+
+            .container {
+                padding-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://favstats.github.io/campaigntrackernl" class="home-link">
+        <iconify-icon icon="mdi:arrow-left" width="20" height="20"></iconify-icon>
+        Back to Dashboard
+    </a>
+
+    <div class="container">
+        <div id="post-container"></div>
+    </div>
+
+    <script>
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Extract all parameters
+        const postData = {
+            username: urlParams.get('username'),
+            post_id: urlParams.get('post_id'),
+            platform: urlParams.get('platform'),
+            hash: urlParams.get('hash'),
+            url: urlParams.get('url'),
+            list_source: urlParams.get('list_source'),
+            timevar: urlParams.get('timevar'),
+            file_path: urlParams.get('file_path'),
+            filename: urlParams.get('filename'),
+            text: urlParams.get('text'),
+            coder: urlParams.get('coder'),
+            form_link: urlParams.get('form_link')
+        };
+
+        // Extract filename from file_path if filename not directly provided
+        let filename = postData.filename;
+        if (!filename && postData.file_path) {
+            // Extract just the filename from the path
+            const pathParts = postData.file_path.split('/');
+            filename = pathParts[pathParts.length - 1];
+        }
+
+        // Construct GitHub raw URL
+        const mediaUrl = filename ? 
+            `https://raw.githubusercontent.com/favstats/campaigntrackje/main/final_round/${filename}` : 
+            null;
+
+        // Check if we have minimum required data
+        if (!postData.username && !postData.post_id && !mediaUrl) {
+            document.getElementById('post-container').innerHTML = `
+                <div class="gallery-post">
+                    <div class="no-data-message">
+                        <h2>No Post Data</h2>
+                        <p>This page requires URL parameters to display a post.</p>
+                        <p>Please access this page through a link from the Google Sheet.</p>
+                    </div>
+                </div>
+            `;
+        } else {
+            renderPost();
+        }
+
+        function getPlatformIcon(platform) {
+            const iconMap = {
+                'TikTok': { icon: 'simple-icons:tiktok', color: '#000000' },
+                'X': { icon: 'simple-icons:x', color: '#000000' },
+                'FB': { icon: 'simple-icons:facebook', color: '#1877F2' },
+                'Facebook': { icon: 'simple-icons:facebook', color: '#1877F2' },
+                'IG': { icon: 'simple-icons:instagram', color: '#E4405F' },
+                'Instagram': { icon: 'simple-icons:instagram', color: '#E4405F' }
+            };
+            
+            const platformInfo = iconMap[platform] || { icon: 'mdi:web', color: '#6b7280' };
+            return `<iconify-icon icon="${platformInfo.icon}" width="24" height="24" style="color: ${platformInfo.color};"></iconify-icon>`;
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return 'Date not available';
+            try {
+                const date = new Date(dateString);
+                return date.toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            } catch (e) {
+                return dateString;
+            }
+        }
+
+        function getFileExtension(filename) {
+            return filename ? filename.split('.').pop().toLowerCase() : '';
+        }
+
+        function isVideo(filename) {
+            const videoExtensions = ['mp4', 'webm', 'ogg', 'mov', 'avi', 'm4a'];
+            return videoExtensions.includes(getFileExtension(filename));
+        }
+
+        function renderPost() {
+            const container = document.getElementById('post-container');
+            const platformIcon = getPlatformIcon(postData.platform);
+            const formattedDate = formatDate(postData.timevar);
+            const displayText = postData.text || '[No text content]';
+            
+            // Determine if media is video or image
+            const isVideoFile = isVideo(filename);
+            
+            let mediaHTML = '<div class="loading-spinner"></div>';
+            if (mediaUrl) {
+                if (isVideoFile) {
+                    mediaHTML = `
+                        <video class="gallery-post-video" controls autoplay muted loop 
+                               onerror="this.parentElement.innerHTML='<div class=error-message>Failed to load video</div>'">
+                            <source src="${mediaUrl}" type="video/${getFileExtension(filename)}">
+                            Your browser does not support the video tag.
+                        </video>
+                    `;
+                } else {
+                    mediaHTML = `
+                        <img src="${mediaUrl}" 
+                             alt="Post content" 
+                             class="gallery-post-image"
+                             onerror="this.parentElement.innerHTML='<div class=error-message>Failed to load image</div>'">
+                    `;
+                }
+            } else {
+                mediaHTML = '<div class="error-message">No media available</div>';
+            }
+
+            const html = `
+                <div class="gallery-post">
+                    <div class="gallery-post-media-container">
+                        ${mediaHTML}
+                    </div>
+                    <div class="gallery-post-content">
+                        <div class="gallery-post-header">
+                            <span class="gallery-post-platform-icon">
+                                ${platformIcon}
+                            </span>
+                            <div class="gallery-post-account">
+                                <h1 class="gallery-post-name">${postData.username || 'Unknown Account'}</h1>
+                                <p class="gallery-post-date">${formattedDate}</p>
+                            </div>
+                            <span class="gallery-post-platform">${postData.platform || 'Unknown'}</span>
+                        </div>
+                        
+                        <p class="gallery-post-text">${displayText}</p>
+                        
+                        <div class="metadata-section">
+                            ${postData.post_id ? `
+                                <div class="metadata-row">
+                                    <div class="metadata-label">Post ID:</div>
+                                    <div class="metadata-value">${postData.post_id}</div>
+                                </div>
+                            ` : ''}
+                            ${postData.hash ? `
+                                <div class="metadata-row">
+                                    <div class="metadata-label">Hash:</div>
+                                    <div class="metadata-value">${postData.hash}</div>
+                                </div>
+                            ` : ''}
+                            ${postData.list_source ? `
+                                <div class="metadata-row">
+                                    <div class="metadata-label">Source:</div>
+                                    <div class="metadata-value">${postData.list_source}</div>
+                                </div>
+                            ` : ''}
+                            ${postData.coder ? `
+                                <div class="metadata-row">
+                                    <div class="metadata-label">Coder:</div>
+                                    <div class="metadata-value">${postData.coder}</div>
+                                </div>
+                            ` : ''}
+                            ${filename ? `
+                                <div class="metadata-row">
+                                    <div class="metadata-label">Filename:</div>
+                                    <div class="metadata-value">${filename}</div>
+                                </div>
+                            ` : ''}
+                        </div>
+                        
+                        <div class="gallery-buttons-row">
+                            ${postData.url ? `
+                                <a href="${postData.url}" target="_blank" class="gallery-view-original">
+                                    <iconify-icon icon="mdi:open-in-new" width="18" height="18"></iconify-icon>
+                                    View Original Post
+                                </a>
+                            ` : ''}
+                            ${postData.form_link ? `
+                                <a href="${postData.form_link}" target="_blank" class="gallery-view-form">
+                                    <iconify-icon icon="mdi:form-select" width="18" height="18"></iconify-icon>
+                                    View Coding Form
+                                </a>
+                            ` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            container.innerHTML = html;
+        }
+
+        // Update page title with username
+        if (postData.username) {
+            document.title = `${postData.username} - Post Viewer`;
+        }
+    </script>
+</body>
+</html>
+
