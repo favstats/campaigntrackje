@@ -445,6 +445,22 @@
             } else {
                 mediaHTML = '<div class="error-message">No media available</div>';
             }
+            
+            // Construct form link with pre-filled URL and post_id
+            let constructedFormLink = null;
+            if (postData.form_link && postData.url && postData.post_id) {
+                // Check if form_link already has parameters
+                const hasParams = postData.form_link.includes('?');
+                const separator = hasParams ? '&' : '?usp=pp_url&';
+                
+                // Construct the URL with entry fields
+                // entry.1070315931 = URL
+                // entry.858648869 = post_id
+                constructedFormLink = `${postData.form_link}${separator}entry.1070315931=${encodeURIComponent(postData.url)}&entry.858648869=${encodeURIComponent(postData.post_id)}`;
+            } else if (postData.form_link) {
+                // If we don't have url or post_id, just use the base form_link
+                constructedFormLink = postData.form_link;
+            }
 
             const html = `
                 <div class="gallery-post">
@@ -505,8 +521,8 @@
                                     View Original Post
                                 </a>
                             ` : ''}
-                            ${postData.form_link ? `
-                                <a href="${postData.form_link}" target="_blank" class="gallery-view-form">
+                            ${constructedFormLink ? `
+                                <a href="${constructedFormLink}" target="_blank" class="gallery-view-form">
                                     <iconify-icon icon="mdi:form-select" width="18" height="18"></iconify-icon>
                                     View Coding Form
                                 </a>
